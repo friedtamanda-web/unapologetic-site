@@ -1,4 +1,4 @@
-# UNAPOLOGETIC — Ship Guide (GitHub Pages → unapologeticleadership.com)
+# UNAPOLOGETIC — Ship Guide (GitHub Pages → theunapologeticleader.com)
 
 Single-page flagship + favicon + share image. Deploy the whole folder as-is.
 Cross-links to frdtlab.com and your Substack are already baked in.
@@ -14,10 +14,10 @@ Cross-links to frdtlab.com and your Substack are already baked in.
 ## PART 2 — Turn on Pages + custom domain
 1. Repo → **Settings → Pages**.
 2. **Source:** Deploy from a branch · **Branch:** `main` · folder `/ (root)`. Save.
-3. When the temp URL works, set **Custom domain:** `unapologeticleadership.com` → Save (writes a CNAME file — leave it).
+3. When the temp URL works, set **Custom domain:** `theunapologeticleader.com` → Save (writes a CNAME file — leave it).
 
-## PART 3 — GoDaddy DNS for unapologeticleadership.com
-GoDaddy → My Products → DNS for **unapologeticleadership.com**. Same record set as frdtlab.com.
+## PART 3 — GoDaddy DNS for theunapologeticleader.com
+GoDaddy → My Products → DNS for **theunapologeticleader.com**. Same record set as frdtlab.com.
 Delete any "Parked" `A`/`CNAME` on `@`/`www` first.
 
 | Type | Name | Value | TTL |
@@ -30,16 +30,16 @@ Delete any "Parked" `A`/`CNAME` on `@`/`www` first.
 
 (Optional IPv6 — AAAA on `@`: `2606:50c0:8000::153`, `…8001::153`, `…8002::153`, `…8003::153`)
 
-Wait 15–30 min, then in **Settings → Pages** tick **Enforce HTTPS**. `https://unapologeticleadership.com` is live.
+Wait 15–30 min, then in **Settings → Pages** tick **Enforce HTTPS**. `https://theunapologeticleader.com` is live.
 
-> Note: both frdtlab.com and unapologeticleadership.com point their `www` at the SAME
+> Note: both frdtlab.com and theunapologeticleader.com point their `www` at the SAME
 > `friedtamanda-web.github.io`. GitHub routes each to the right repo by the custom-domain
 > (CNAME file) you set per repo. That's expected and works.
 
 ---
 
 ## After it's live
-- Submit `unapologeticleadership.com` to Google Search Console.
+- Submit `theunapologeticleader.com` to Google Search Console.
 - Test the share card in the LinkedIn Post Inspector + opengraph.xyz (the warm "Become fully yourself" card).
 - Fonts (Fraunces + Inter) load from Google in any real browser — the page will look sharper than any flat preview.
 
