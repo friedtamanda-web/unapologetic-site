@@ -1,0 +1,23 @@
+DEPLOY — theunapologeticleader.com  (2026-06-15)
+
+EASIEST WAY (upload FILES, not the folder — the folder drag doesn't work on GitHub):
+
+STEP 1 — update the pages (root files)
+  Repo home > Add file > Upload files > drag ALL the .html files + sitemap.xml +
+  robots.txt + CNAME + favicon.svg + og-image.jpg  > Commit changes.
+
+STEP 2 — create the img folder
+  Add file > Create new file. In the name box type:  img/stage-sel-temp.txt
+  (typing the "/" makes the folder). Type "x" in the body. Commit.
+
+STEP 3 — put the photos in img
+  Click into the new "img" folder > Add file > Upload files >
+  drag the 9 image FILES from this zip's img folder > Commit.
+  (Then you can delete stage-sel-temp.txt.)
+
+DONE. Site rebuilds in ~1-2 min. NEVER delete the CNAME file (holds your domain).
+
+IMAGES INCLUDED (EXIF/GPS stripped):
+  Proof photos: stage-sel, award-stage, award-2023, award-2018, award-landy
+  Quote cards:  scared-card, ready-card, becoming-card, behind-card
+  LIVE: Speaking proof strip, Press hero, About card, Home "From the field" gallery.
