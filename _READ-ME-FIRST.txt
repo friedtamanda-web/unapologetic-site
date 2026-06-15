@@ -1,0 +1,15 @@
+UNAPOLOGETIC — LAUNCH FOLDER (updated 2026-06-15)
+Drag the CONTENTS of this folder into your theunapologeticleader.com GitHub repo, commit, push.
+
+WHAT'S NEW THIS UPDATE
+- index/essays/signal: essay cards now link to your 3 real Substack posts (no more dead links)
+- friday-conversations: Amanda Farley -> Amanda Friedt (all 4 spots)
+- amplify.html + press.html: two NEW pages
+- All pages: Person + page schema (SEO / AI discovery), Amplify+Press linked in footers
+- sitemap.xml: updated to real pages
+
+KEEP THE CNAME FILE. It holds your custom domain. (Included here so a full re-upload won't drop it.)
+
+IMAGES: about.html references img/scared-card.jpg which is NOT included yet.
+Until you add that image to /img, that one spot shows a broken icon. Either add the
+image, or hold about.html. The other 7 pages have no missing-image dependencies.
