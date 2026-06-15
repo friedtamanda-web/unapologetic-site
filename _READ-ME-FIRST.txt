@@ -1,15 +1,16 @@
-UNAPOLOGETIC — LAUNCH FOLDER (updated 2026-06-15)
-Drag the CONTENTS of this folder into your theunapologeticleader.com GitHub repo, commit, push.
+UNAPOLOGETIC — LAUNCH FOLDER (2026-06-15) — NOW WITH REAL PHOTOS
+Drag the CONTENTS into your theunapologeticleader.com GitHub repo, commit, push.
+KEEP THE CNAME FILE (holds your domain).
 
-WHAT'S NEW THIS UPDATE
-- index/essays/signal: essay cards now link to your 3 real Substack posts (no more dead links)
-- friday-conversations: Amanda Farley -> Amanda Friedt (all 4 spots)
-- amplify.html + press.html: two NEW pages
-- All pages: Person + page schema (SEO / AI discovery), Amplify+Press linked in footers
-- sitemap.xml: updated to real pages
+INCLUDED IMAGES (in /img, EXIF/GPS stripped for privacy):
+- stage-sel.jpg ....... Search Engine Land / Marketing Land stage  -> Speaking + Press
+- award-stage.jpg ..... US Search Awards, accepting                -> Speaking proof strip
+- award-2023.jpg ...... 2023 US Search Awards trophy               -> Speaking proof strip
+- award-2018.jpg ...... 2018 US Search Awards                      -> Speaking proof strip
+- award-landy.jpg ..... Landy Awards 2016 (Search Engine Land/Google) -> Speaking proof strip
+LIVE NOW: Speaking page shows a 5-photo proof strip; Press page shows the stage hero.
 
-KEEP THE CNAME FILE. It holds your custom domain. (Included here so a full re-upload won't drop it.)
-
-IMAGES: about.html references img/scared-card.jpg which is NOT included yet.
-Until you add that image to /img, that one spot shows a broken icon. Either add the
-image, or hold about.html. The other 7 pages have no missing-image dependencies.
+STILL NEEDED (slots waiting, not breaking anything):
+- Quote cards (scared/ready/becoming/behind/take-the-trip) + headshot -> still chat-preview only.
+  Drop them in /img with the names in IMAGE-RENAME-MAP and the home gallery + About lights up.
+- HELD: the mom-and-son selfie (IMG_2364) — a child's face; publish only if you choose to.
