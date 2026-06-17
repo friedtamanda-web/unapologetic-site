@@ -1,3 +1,3 @@
 # The Unapologetic Leader — Deploy (updated)
-New since last build: Start Here manifesto page (the launch letter), homepage letter feature, Scorecard linked in nav/footer, Google Analytics G-1TGNWXQ27S under Consent Mode v2 (denied by default + Allow/Decline banner), privacy policy updated to match.
-Publish: upload CONTENTS to the theunapologeticleader.com repo, keep CNAME, commit to main.
+New: from-the-field.html (Lines to Carry — 12 shareable cards with native share); linked in footer + sitemap + llms.txt. Plus prior build (Start Here letter, GA4 + Consent Mode v2, Scorecard, schema, Substack handle theunapologeticleader.substack.com).
+Publish: upload CONTENTS to the repo, keep CNAME, commit to main.
