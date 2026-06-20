@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="Love is not the same as carrying. Love stays beside you, trusts your capacity, lets you struggle, has edges, and renews the giver. Carrying steps in front of you, doubts your capacity, removes the struggle, has no edges, and depletes the giver.">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Archivo+Narrow:wght@700&amp;family=JetBrains+Mono:wght@500&amp;display=swap');
+      .disp{font-family:"Archivo Narrow","Archivo",sans-serif;font-weight:700;text-transform:uppercase}
+      .sans{font-family:"Archivo",system-ui,sans-serif}
+      .mono{font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase}
+      .ink{fill:#0e0e11}.soft{fill:#3c3c44}.gray{fill:#73737d}.pink{fill:#ff2d83}.pinkd{fill:#e2186e}
+    </style>
+  </defs>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <text x="64" y="70" class="mono pinkd" font-size="13">The Unapologetic Leader · Framework</text>
+  <text x="64" y="120" class="disp ink" font-size="44">Love is not the same</text>
+  <text x="64" y="166" class="disp ink" font-size="44">as <tspan class="pink">carrying.</tspan></text>
+  <rect x="64" y="190" width="48" height="4" fill="#ff2d83"/>
+
+  <!-- divider -->
+  <line x1="480" y1="250" x2="480" y2="566" stroke="#e8e8ec" stroke-width="2"/>
+
+  <!-- LOVE column -->
+  <text x="64" y="270" class="mono pink" font-size="13">Love</text>
+  <g class="sans" font-size="19">
+    <text x="64" y="318" class="ink">Stays beside you</text>
+    <text x="64" y="364" class="ink">Trusts your capacity</text>
+    <text x="64" y="410" class="ink">Lets you struggle</text>
+    <text x="64" y="456" class="ink">Has edges</text>
+    <text x="64" y="502" class="ink">Renews the giver</text>
+  </g>
+  <g fill="#ff2d83">
+    <circle cx="48" cy="312" r="4"/><circle cx="48" cy="358" r="4"/>
+    <circle cx="48" cy="404" r="4"/><circle cx="48" cy="450" r="4"/><circle cx="48" cy="496" r="4"/>
+  </g>
+
+  <!-- CARRYING column -->
+  <text x="520" y="270" class="mono gray" font-size="13">Carrying</text>
+  <g class="sans" font-size="19">
+    <text x="520" y="318" class="soft">Steps in front of you</text>
+    <text x="520" y="364" class="soft">Doubts your capacity</text>
+    <text x="520" y="410" class="soft">Removes the struggle</text>
+    <text x="520" y="456" class="soft">Has no edges</text>
+    <text x="520" y="502" class="soft">Depletes the giver</text>
+  </g>
+  <g fill="#73737d">
+    <rect x="504" y="308" width="8" height="8"/><rect x="504" y="354" width="8" height="8"/>
+    <rect x="504" y="400" width="8" height="8"/><rect x="504" y="446" width="8" height="8"/><rect x="504" y="492" width="8" height="8"/>
+  </g>
+
+  <!-- footer line -->
+  <line x1="64" y1="556" x2="896" y2="556" stroke="#e8e8ec" stroke-width="2"/>
+  <text x="64" y="600" class="disp ink" font-size="26">You can love them without <tspan class="pink">carrying</tspan> them.</text>
+</svg>

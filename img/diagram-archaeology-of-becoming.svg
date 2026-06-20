@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="The Archaeology of Becoming. Four layers, dug downward: the surface is who they needed; below it, what you carried; below that, what was never yours; at the bottom, who you actually are. You are not building a new self. You are uncovering the one underneath.">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Archivo+Narrow:wght@700&amp;family=JetBrains+Mono:wght@500&amp;display=swap');
+      .disp{font-family:"Archivo Narrow","Archivo",sans-serif;font-weight:700;text-transform:uppercase}
+      .sans{font-family:"Archivo",system-ui,sans-serif}
+      .mono{font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase}
+      .ink{fill:#0e0e11}.soft{fill:#3c3c44}.gray{fill:#73737d}.pink{fill:#ff2d83}.pinkd{fill:#e2186e}
+    </style>
+  </defs>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <text x="64" y="64" class="mono pinkd" font-size="13">The Unapologetic Leader · Framework</text>
+  <text x="64" y="112" class="disp ink" font-size="40">The archaeology of <tspan class="pink">becoming.</tspan></text>
+  <rect x="64" y="132" width="48" height="4" fill="#ff2d83"/>
+
+  <!-- strata layers -->
+  <g class="sans">
+    <!-- layer 1 surface -->
+    <rect x="64" y="170" width="832" height="86" rx="8" fill="#f7f7f9" stroke="#e8e8ec"/>
+    <text x="92" y="204" class="mono gray" font-size="11">Surface</text>
+    <text x="92" y="234" class="disp ink" font-size="22">Who they needed you to be</text>
+
+    <!-- layer 2 -->
+    <rect x="64" y="266" width="832" height="86" rx="8" fill="#efeff2" stroke="#e3e3e8"/>
+    <text x="92" y="300" class="mono gray" font-size="11">Layer II</text>
+    <text x="92" y="330" class="disp ink" font-size="22">What you carried to be loved</text>
+
+    <!-- layer 3 -->
+    <rect x="64" y="362" width="832" height="86" rx="8" fill="#e4e4ea" stroke="#d7d7df"/>
+    <text x="92" y="396" class="mono gray" font-size="11">Layer III</text>
+    <text x="92" y="426" class="disp ink" font-size="22">What was never yours to hold</text>
+
+    <!-- bedrock -->
+    <rect x="64" y="458" width="832" height="96" rx="8" fill="#0e0e11"/>
+    <text x="92" y="494" class="mono pink" font-size="11">Bedrock</text>
+    <text x="92" y="526" class="disp" fill="#ffffff" font-size="24">Who you actually <tspan class="pink">are</tspan></text>
+  </g>
+
+  <!-- descending arrow -->
+  <g fill="none" stroke="#ff2d83" stroke-width="2.5">
+    <path d="M912 196 L912 520"/>
+  </g>
+  <path d="M912 532 L906 518 L918 518 z" fill="#ff2d83"/>
+
+  <line x1="64" y1="582" x2="896" y2="582" stroke="#e8e8ec" stroke-width="2"/>
+  <text x="64" y="614" class="sans soft" font-size="16">You're not building a new self. You're uncovering the one underneath.</text>
+</svg>

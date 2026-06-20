@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="Cultivating versus controlling. Cultivating tends the conditions, builds others' judgment, releases under stress, grows capacity, and works when you are not in the room. Controlling manages the outcome, holds the only answer, grips tighter under stress, grows dependence, and only works while you are present.">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=Archivo+Narrow:wght@700&amp;family=JetBrains+Mono:wght@500&amp;display=swap');
+      .disp{font-family:"Archivo Narrow","Archivo",sans-serif;font-weight:700;text-transform:uppercase}
+      .sans{font-family:"Archivo",system-ui,sans-serif}
+      .mono{font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase}
+      .ink{fill:#0e0e11}.soft{fill:#3c3c44}.gray{fill:#73737d}.pink{fill:#ff2d83}.pinkd{fill:#e2186e}
+    </style>
+  </defs>
+  <rect width="960" height="640" fill="#ffffff"/>
+  <text x="64" y="70" class="mono pinkd" font-size="13">The Unapologetic Leader · Framework</text>
+  <text x="64" y="120" class="disp ink" font-size="44"><tspan class="pink">Cultivating</tspan> vs controlling.</text>
+  <rect x="64" y="144" width="48" height="4" fill="#ff2d83"/>
+
+  <line x1="480" y1="210" x2="480" y2="520" stroke="#e8e8ec" stroke-width="2"/>
+
+  <!-- CULTIVATING -->
+  <text x="64" y="232" class="mono pink" font-size="13">Cultivating</text>
+  <g class="sans ink" font-size="19">
+    <text x="64" y="284">Tends the conditions</text>
+    <text x="64" y="330">Builds others' judgment</text>
+    <text x="64" y="376">Releases under stress</text>
+    <text x="64" y="422">Grows capacity</text>
+    <text x="64" y="468">Works when you're not in the room</text>
+  </g>
+  <g fill="#ff2d83">
+    <circle cx="48" cy="278" r="4"/><circle cx="48" cy="324" r="4"/>
+    <circle cx="48" cy="370" r="4"/><circle cx="48" cy="416" r="4"/><circle cx="48" cy="462" r="4"/>
+  </g>
+
+  <!-- CONTROLLING -->
+  <text x="520" y="232" class="mono gray" font-size="13">Controlling</text>
+  <g class="sans soft" font-size="19">
+    <text x="520" y="284">Manages the outcome</text>
+    <text x="520" y="330">Holds the only answer</text>
+    <text x="520" y="376">Grips tighter under stress</text>
+    <text x="520" y="422">Grows dependence</text>
+    <text x="520" y="468">Only works while you're present</text>
+  </g>
+  <g fill="#73737d">
+    <rect x="504" y="274" width="8" height="8"/><rect x="504" y="320" width="8" height="8"/>
+    <rect x="504" y="366" width="8" height="8"/><rect x="504" y="412" width="8" height="8"/><rect x="504" y="458" width="8" height="8"/>
+  </g>
+
+  <line x1="64" y1="556" x2="896" y2="556" stroke="#e8e8ec" stroke-width="2"/>
+  <text x="64" y="600" class="disp ink" font-size="26">Control scales with you. <tspan class="pink">Cultivation scales past you.</tspan></text>
+</svg>
