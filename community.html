@@ -164,7 +164,12 @@
   <div class="sec-head"><div class="eb">For teachers</div><h2>Teaching in a Detroit classroom and need backup?</h2>
     <p>Tell us what your room needs — books, supplies, a reading volunteer, or a hand. No bureaucracy. We read every one.</p></div>
   <div class="pform" style="text-align:center">
-    <div class="klaviyo-form-TEACHERS"><!-- swap class with live Klaviyo form id (Teacher Support list) --></div>
+    <form data-kl-event="Teacher Support Request" style="text-align:left">
+      <div class="row2"><div class="field"><label>Name</label><input name="name" type="text" required></div><div class="field"><label>Email</label><input name="email" type="email" required></div></div>
+      <div class="field"><label>Your school</label><input name="school" type="text"></div>
+      <div class="field"><label>What would help most?</label><textarea name="need" placeholder="Books, supplies, a reading volunteer, a hand..."></textarea></div>
+      <button type="submit" class="btn btn-primary">Send it over</button>
+    </form>
     <p class="form-note">Or email us directly at <a href="mailto:hello@frdtlab.com?subject=Teacher%20support%20request">hello@frdtlab.com</a></p>
   </div>
 </div></section>
@@ -173,11 +178,36 @@
   <div class="sec-head"><div class="eb">Get involved</div><h2>Want to help?</h2>
     <p>Volunteer, give, or partner. Tell us how you'd like to show up and we'll point you to where it lands.</p></div>
   <div class="pform" style="text-align:center;background:#141417;border-color:#2c2d33">
-    <div class="klaviyo-form-INVOLVED"><!-- swap class with live Klaviyo form id (Get Involved list) --></div>
+    <form data-kl-event="Get Involved" style="text-align:left">
+      <div class="row2"><div class="field"><label>Name</label><input name="name" type="text" required></div><div class="field"><label>Email</label><input name="email" type="email" required></div></div>
+      <div class="field"><label>How would you like to help?</label><input name="how" type="text" placeholder="Volunteer · give · partner"></div>
+      <button type="submit" class="btn btn-primary">Count me in</button>
+    </form>
     <p class="form-note" style="color:var(--dim)">Or email <a href="mailto:hello@frdtlab.com?subject=One%20Step%20Forward%20%E2%80%94%20get%20involved" style="color:var(--pink)">hello@frdtlab.com</a></p>
   </div>
   <p style="text-align:center;color:var(--dim);font-size:.92rem;max-width:54ch;margin:26px auto 0">One Step Forward is a grassroots initiative building toward formal nonprofit status. Support today goes straight to classrooms.</p>
 </div></section>
+
+
+<section class="events"><div class="wrap">
+  <div class="sec-head"><div class="eb">In the community</div><h2>On the ground in Detroit.</h2>
+    <p>Schools, classrooms, and causes we've shown up for.</p></div>
+  <div><div class="ev-grp"><h3>Community &amp; causes</h3><div class="ev"><span class="ev-d">May 20, 2026</span><span class="ev-n">Fisher Magnet Academy Career Day</span></div>
+<div class="ev"><span class="ev-d">May 20, 2026</span><span class="ev-n">Detroit Public Schools volunteer day</span></div>
+<div class="ev"><span class="ev-d">Oct 5, 2025</span><span class="ev-n">American Cancer Society — Making Strides Walk</span></div>
+<div class="ev"><span class="ev-d">Mar 5, 2025</span><span class="ev-n">Ralph Bunche Prep — Student Advisory Council</span></div>
+<div class="ev"><span class="ev-d">Nov 18, 2023</span><span class="ev-n">Comedy 4 Cancer — “This One's 4 You”</span></div></div></div>
+</div></section>
+<style>
+.events .ev-sub{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin:30px 0 12px}
+.events .ev-grp{margin-top:26px}
+.events .ev-grp h3{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.1rem;color:var(--ink);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.events .ev{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.events .ev-d{font-family:var(--mono);font-size:12px;color:var(--gray);white-space:nowrap}
+.events .ev-n{font-family:var(--sans);font-size:1rem;color:var(--ink-soft);line-height:1.4}
+.events .ev-n a{color:var(--pink-deep);margin-left:4px}
+@media(max-width:560px){.events .ev{grid-template-columns:1fr;gap:2px}}
+</style>
 
 <section class="bridge" style="background:var(--paper-2)"><div class="wrap"><div class="in">
   <div>
@@ -200,5 +230,17 @@
 <style>.ulc{position:fixed;left:16px;right:16px;bottom:16px;z-index:9000;max-width:560px;margin:0 auto;background:#fff;border:1px solid #e6e6ea;border-radius:14px;box-shadow:0 16px 50px rgba(0,0,0,.18);padding:16px 18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}.ulc[hidden]{display:none}.ulc p{margin:0;font-size:.86rem;color:#3c3c44;line-height:1.4;flex:1 1 220px}.ulc p a{color:#e2186e}.ulc-b{display:flex;gap:10px}.ulc-btn{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;border-radius:30px;border:none;cursor:pointer}.ulc-g{background:transparent;border:1px solid #e6e6ea;color:#3c3c44}.ulc-y{background:#ff2d83;color:#fff}</style>
 <div id="ulConsent" class="ulc" hidden role="dialog" aria-label="Privacy choices"><p>We use one privacy-friendly analytics cookie to learn what resonates. No ads, no selling your data. <a href="privacy.html">Privacy</a><a href="messaging.html">Messaging Terms</a><a href="privacy.html#choices">Your Privacy Choices</a>.</p><div class="ulc-b"><button type="button" id="ulcNo" class="ulc-btn ulc-g">Decline</button><button type="button" id="ulcYes" class="ulc-btn ulc-y">Allow</button></div></div>
 <script>(function(){var K='ul-consent-v1',b=document.getElementById('ulConsent'),s=null;function a(x){gtag('consent','update',{'ad_storage':x,'ad_user_data':x,'ad_personalization':x,'analytics_storage':x});}try{s=localStorage.getItem(K);}catch(e){}if(s==='granted')a('granted');else if(s!=='denied'){if(b)b.hidden=false;}function c(v){try{localStorage.setItem(K,v);}catch(e){}if(v==='granted')a('granted');if(b)b.hidden=true;}var y=document.getElementById('ulcYes'),n=document.getElementById('ulcNo');if(y)y.onclick=function(){c('granted')};if(n)n.onclick=function(){c('denied')};})();</script>
+<script>/* kl-lead-handler */
+document.addEventListener('submit',function(e){
+  var f=e.target; if(!f||!f.getAttribute||!f.getAttribute('data-kl-event'))return;
+  e.preventDefault();
+  var fd=new FormData(f),p={};
+  fd.forEach(function(v,k){ if(k.charAt(0)!=='_'&&v){ p[k]=p[k]?p[k]+', '+v:''+v; } });
+  var email=p.email||p.Email||'';
+  try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); } }catch(err){}
+  var msg=document.createElement('p'); msg.className='form-note'; msg.style.cssText='font-size:1.05rem;margin-top:8px'; msg.textContent='Thank you — we got it. We will be in touch.';
+  f.parentNode.insertBefore(msg,f.nextSibling); f.style.display='none';
+});
+</script>
 </body>
 </html>
