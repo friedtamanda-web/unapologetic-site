@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+import re, json, base64, html
+SRC="from-the-field.html"; BASE="https://theunapologeticleader.com"
+h=open(SRC).read()
+data=json.loads(re.search(r'DATA\s*=\s*(\[.*?\])\s*;',h,re.S).group(1))
+SLUGS={3:"set-free",17:"rest-is-integrity",23:"let-the-circus-be-theirs",28:"i-am-the-pilot",
+30:"loving-me-first",31:"nothing-meant-to-be-mine",32:"content-built-empires",35:"a-purpose-everywhere",
+37:"too-much-love",38:"be-the-lighthouse",44:"exactly-where-you-need-to-be",45:"the-light-never-moved"}
+def imgkey(it):
+    for k in ("warm","soul","light","card","dark"):
+        if k in it and isinstance(it[k],str) and len(it[k])>200: return k
+GA='''<!-- Consent Mode v2 -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','wait_for_update':500});</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TGNWXQ27S"></script>
+<script>gtag('js',new Date());gtag('config','G-1TGNWXQ27S');</script>'''
+CSS='''<style>
+:root{--paper:#fff;--ink:#0e0e11;--ink-soft:#3c3c44;--gray:#73737d;--line:#e8e8ec;--black:#0b0b0c;--pink:#ff2d83;--pink-deep:#e2186e;--display:"Archivo Narrow","Archivo",sans-serif;--sans:"Archivo",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{margin:0;padding:0;box-sizing:border-box}html{-webkit-font-smoothing:antialiased;background:#fff;scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6}a{color:inherit;text-decoration:none}
+.nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.ni{max-width:1180px;margin:0 auto;padding:15px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.ni .lk{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}.ni .lk:hover{color:var(--pink)}
+.wrap{max-width:640px;margin:0 auto;padding:0 24px}
+header{text-align:center;padding:70px 0 10px}
+.kick{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:18px}
+h1{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.0;color:var(--ink);max-width:18ch;margin:0 auto}
+.rule{width:42px;height:3px;background:var(--pink);margin:24px auto 0}
+.cardwrap{max-width:520px;margin:34px auto 8px;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 34px rgba(14,14,17,.12)}
+.cardwrap img{width:100%;display:block}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:30px 0 8px}
+.btn{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:14px 26px;border-radius:32px;display:inline-block;cursor:pointer;border:none}
+.btn-primary{background:var(--pink);color:#fff}.btn-primary:hover{background:var(--ink)}
+.btn-text{color:var(--ink);border-bottom:2px solid var(--pink);border-radius:0;padding:5px 2px}.btn-text:hover{color:var(--pink-deep)}
+.more{text-align:center;margin:26px auto 0}.more a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);border-bottom:1px solid var(--line)}
+footer{border-top:1px solid var(--line);margin-top:54px;padding:38px 0;text-align:center;color:var(--gray);font-size:.82rem}
+.foot-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.foot-links a{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}.foot-links a:hover{color:var(--pink)}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:30px;font-size:14px;opacity:0;pointer-events:none;transition:all .25s;z-index:50}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>'''
+PAGE='''<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{q} · Lines to Carry · The Unapologetic Leader</title>
+<meta name="description" content="{q} A line to carry from The Unapologetic Leader by Amanda Friedt.">
+<link rel="canonical" href="{base}/line-{slug}.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="article"><meta property="og:site_name" content="The Unapologetic Leader">
+<meta property="og:title" content="{q}"><meta property="og:description" content="A line to carry from The Unapologetic Leader.">
+<meta property="og:url" content="{base}/line-{slug}.html"><meta property="og:image" content="{base}/card-{slug}.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{q}"><meta name="twitter:image" content="{base}/card-{slug}.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Archivo+Narrow:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Quotation","text":{qj},"spokenByCharacter":{{"@type":"Person","name":"Amanda Friedt"}},"creator":{{"@type":"Person","name":"Amanda Friedt"}},"isPartOf":{{"@type":"CollectionPage","name":"Lines to Carry","url":"{base}/from-the-field.html"}},"image":"{base}/card-{slug}.png","url":"{base}/line-{slug}.html"}}</script>
+{ga}
+{css}
+</head><body>
+<nav class="nav"><div class="ni"><a class="brand" href="index.html">UNAPOLOGETIC</a><a class="lk" href="from-the-field.html">All lines →</a></div></nav>
+<header><div class="wrap"><div class="kick">A line to carry</div><h1>{q}</h1><div class="rule"></div></div></header>
+<div class="wrap">
+  <div class="cardwrap"><img src="card-{slug}.png" alt="{q}"></div>
+  <div class="cta-row"><button class="btn btn-primary" onclick="shareLine()">Share this</button><a class="btn btn-text" href="https://theunapologeticleader.substack.com/?utm_source=lines&utm_medium={slug}">Walk with us</a></div>
+  <div class="more"><a href="from-the-field.html">See all the lines →</a></div>
+</div>
+<footer><div class="wrap"><div>© 2026 The Unapologetic Leader · Detroit · Her words, cleaned for legibility, never rewritten.</div>
+  <div class="foot-links"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="from-the-field.html">From the Field</a><a href="https://theunapologeticleader.substack.com/">Subscribe</a></div></div></footer>
+<div id="toast" class="toast"></div>
+<script>
+function toast(t){{var e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(function(){{e.classList.remove('show')}},2600);}}
+async function shareLine(){{var url=location.href,text={qj}+'  \\u2014 The Unapologetic Leader  theunapologeticleader.com';
+  try{{var r=await fetch('card-{slug}.png');var b=await r.blob();var f=new File([b],'{slug}.png',{{type:'image/png'}});
+    if(navigator.canShare&&navigator.canShare({{files:[f]}})){{await navigator.share({{files:[f],text:text}});return;}}}}catch(e){{}}
+  if(navigator.share){{try{{await navigator.share({{title:'Lines to Carry',text:text,url:url}});return;}}catch(e){{}}}}
+  try{{await navigator.clipboard.writeText(text+'  '+url);toast('Link and caption copied');}}catch(e){{toast('Copy this link: '+url);}}
+}}
+</script></body></html>'''
+made=[]
+for it in data:
+    slug=SLUGS.get(it.get("id")); k=imgkey(it)
+    if not slug or not k: continue
+    open(f"card-{slug}.png","wb").write(base64.b64decode(it[k]))
+    q=html.escape(it.get("text","").strip())
+    open(f"line-{slug}.html","w").write(PAGE.format(q=q,qj=json.dumps(it.get("text","").strip()),slug=slug,base=BASE,ga=GA,css=CSS))
+    made.append((it["id"],slug))
+open("_flatmap.json","w").write(json.dumps({str(c):s for c,s in made}))
+print("flat pages+images:",len(made))
