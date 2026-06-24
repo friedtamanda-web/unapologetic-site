@@ -12,8 +12,14 @@
 ## Key pages
 - [Start Here — the founding letter](https://theunapologeticleader.com/start-here.html): "The light never moved." On carrying what was never yours, the human cost of competence, and the permission to put it down.
 - [About](https://theunapologeticleader.com/about.html): Who Amanda Friedt is and what the movement is for.
+- [The Frameworks](https://theunapologeticleader.com/frameworks.html): The core concepts of The Unapologetic Leader, defined — the Human Cost of Competence, Carrying vs. Caring, Women Who Became Infrastructure, Cultivating vs. Controlling, and the What Am I Carrying? diagnostic.
+  - [The Human Cost of Competence](https://theunapologeticleader.com/human-cost-of-competence.html): The hidden tax capable people pay — reliability invites more load.
+  - [Carrying vs. Caring](https://theunapologeticleader.com/carrying-vs-caring.html): The difference between loving people and carrying them; trust is participation without possession.
+  - [Women Who Became Infrastructure](https://theunapologeticleader.com/women-who-became-infrastructure.html): The high-capacity women whose labor became the uncredited foundation.
+  - [Cultivating vs. Controlling](https://theunapologeticleader.com/cultivating-vs-controlling.html): Tending conditions vs managing outcomes; one builds capacity, the other dependency.
+  - [What Am I Carrying?](https://theunapologeticleader.com/what-am-i-carrying.html): The diagnostic that sorts what is yours from what is not.
 - [Speaking](https://theunapologeticleader.com/speaking.html): Four leadership keynotes for high-capacity women — The Difference Between Love and Carrying, The Human Cost of Competence, Cultivating vs. Controlling, and Permission.
-- [Mentorship](https://theunapologeticleader.com/mentorship.html): Apply for the summer 2026 mentorship. One mentee, 90 days, bi-weekly connects.
+- [Mentorship](https://theunapologeticleader.com/mentorship.html): Apply for the fall 2026 mentorship. One mentee, 90 days, bi-weekly connects.
 - [Partner](https://theunapologeticleader.com/partner.html): For practitioners, culture-building leaders, and collaborators who serve the same women — license the frameworks, co-create, refer, or contribute to the movement.
 - [Scorecard](https://theunapologeticleader.com/scorecard.html): "Are you carrying what isn't yours?" A short self-assessment.
 - [Essays](https://theunapologeticleader.com/essays.html): Writing on leadership, identity, and becoming.
@@ -27,6 +33,8 @@
 
 ## Related
 - [FRDTLAB](https://frdtlab.com/): The marketing, AI, and systems side of the same body of work.
+- [Community · One Step Forward](https://theunapologeticleader.com/community.html): Detroit K-5 classroom and teacher support initiative; partners with InnovatED313. Teacher-support and get-involved signups.
+- [Gatherings](https://theunapologeticleader.com/gatherings.html): Empowered Women Connections — in-person women's meetups in Detroit.
 
 ## Author
 Amanda Friedt, also known as Amanda Farley and Amanda Friedt Farley. Detroit-based growth strategist, speaker, founder of FRDTLAB, creator of Unapologetic Leadership, and host of Amplify. Two decades in integrated marketing, AI-era search, and organizational transformation; founder of the One Step Forward Initiative in Detroit.
