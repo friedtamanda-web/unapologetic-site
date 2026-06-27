@@ -1,0 +1,71 @@
+<!-- ============================================================
+     UL Dispatch — custom on-brand email capture → Klaviyo API
+     Drop-in replacement for the Klaviyo embed in the Dispatch section.
+     Needs ONE value: your Klaviyo LIST ID (replace LIST_ID_HERE).
+     Uses the public client endpoint (company_id Twvzce) — no secret key.
+     ============================================================ -->
+<div class="kv-form" id="kvDispatch">
+  <form id="kvDispatchForm" novalidate>
+    <div class="kv-row">
+      <input type="email" id="kvEmail" name="email" placeholder="Your email" required autocomplete="email">
+      <button type="submit" class="btn btn-primary" id="kvBtn">Send me the letters</button>
+    </div>
+    <p class="kv-note" id="kvNote">Free. Arrives when there is something real to say.</p>
+  </form>
+  <div class="kv-success" id="kvSuccess" hidden>
+    <strong>You're in.</strong> Watch your inbox — the first letter is on its way.
+  </div>
+</div>
+
+<style>
+  .kv-form{max-width:520px}
+  .kv-row{display:flex;gap:10px;flex-wrap:wrap}
+  #kvEmail{flex:1 1 240px;font-family:var(--sans,"Archivo",sans-serif);font-size:1rem;padding:14px 16px;border:1px solid var(--line,#e6e6ea);border-radius:30px;background:#fff;color:var(--ink,#0e0e11)}
+  #kvEmail:focus{outline:none;border-color:var(--pink,#ff2d83)}
+  #kvDispatch .btn-primary{background:var(--pink,#ff2d83);color:#fff;border:none;border-radius:30px;padding:14px 26px;font-weight:600;cursor:pointer;font-family:var(--sans,"Archivo",sans-serif)}
+  #kvDispatch .btn-primary:hover{background:var(--ink,#0e0e11)}
+  #kvDispatch .btn-primary[disabled]{opacity:.6;cursor:default}
+  .kv-note{font-size:.85rem;color:var(--gray,#6c6c76);margin-top:10px}
+  .kv-note.kv-err{color:#c0264b}
+  .kv-success{font-size:1.05rem;color:var(--ink,#0e0e11);padding:6px 0}
+  .kv-success strong{color:var(--pink-deep,#e2186e)}
+</style>
+
+<script>
+(function(){
+  var COMPANY = "Twvzce";
+  var LIST_ID = "LIST_ID_HERE";          // <-- paste your Klaviyo List ID here
+  var form = document.getElementById("kvDispatchForm");
+  var note = document.getElementById("kvNote");
+  var btn  = document.getElementById("kvBtn");
+  if(!form) return;
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    var email = document.getElementById("kvEmail").value.trim();
+    if(!email || email.indexOf("@") < 1){ note.textContent = "Enter a valid email."; note.classList.add("kv-err"); return; }
+    btn.disabled = true; btn.textContent = "Sending…"; note.classList.remove("kv-err");
+    fetch("https://a.klaviyo.com/client/subscriptions/?company_id=" + COMPANY, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "revision": "2024-10-15" },
+      body: JSON.stringify({
+        data: {
+          type: "subscription",
+          attributes: { profile: { data: { type: "profile", attributes: { email: email } } } },
+          relationships: { list: { data: { type: "list", id: LIST_ID } } }
+        }
+      })
+    }).then(function(r){
+      if(r.status === 202 || r.ok){
+        document.getElementById("kvDispatch").querySelector("form").hidden = true;
+        document.getElementById("kvSuccess").hidden = false;
+      } else {
+        note.textContent = "Something went wrong — try again."; note.classList.add("kv-err");
+        btn.disabled = false; btn.textContent = "Send me the letters";
+      }
+    }).catch(function(){
+      note.textContent = "Something went wrong — try again."; note.classList.add("kv-err");
+      btn.disabled = false; btn.textContent = "Send me the letters";
+    });
+  });
+})();
+</script>

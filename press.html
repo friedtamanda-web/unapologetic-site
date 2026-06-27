@@ -12,7 +12,9 @@
 <meta property="og:image" content="https://theunapologeticleader.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="UNAPOLOGETIC · Press &amp; Media Kit"><meta name="twitter:description" content="Press and booking kit for Amanda Friedt: bios, speaking topics, awards, talking points, and contact. Founder of FRDTLAB, creator of Unapologetic Leadership.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ============================================================
    UNAPOLOGETIC — bold + electric, white-based.
@@ -217,7 +219,7 @@ footer{background:var(--black);color:var(--on-dark);padding:78px 0 44px}
   gtag('config', 'G-1TGNWXQ27S');
 </script>
 <!-- Klaviyo onsite (account Twvzce) -->
-<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/Twvzce/klaviyo.js?company_id=Twvzce"></script>
+<script>addEventListener("load",function(){var s=document.createElement("script");s.async=1;s.src="https://static.klaviyo.com/onsite/js/Twvzce/klaviyo.js?company_id=Twvzce";document.head.appendChild(s);});</script>
 <script type="text/javascript">
 !function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
 </script>
@@ -245,6 +247,19 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
 .feature em{color:#E84393!important}
 </style>
 
+<style id="a11y-2027">
+/* WCAG AA contrast pass */
+.eyebrow,.kicker,.sec-kicker{color:#b81c66!important}
+.btn-primary,.nav-cta:hover,.ulc-yes,.gumroad-button{background:#b81c66!important;color:#fff!important}
+.btn-primary:hover{background:#1A1614!important}
+/* fix dark-on-dark: btn-text + step numbers inside dark sections were ink-on-ink */
+.dark .btn-text,.sec.dark .btn-text{color:#F4EEE6!important}
+.dark .n,.sec.dark .n,.dark .qn,.sec.dark .qn{color:#E84393!important}
+/* keep bright pink on dark sections (passes AA) */
+.dark .eyebrow,.sec.dark .eyebrow,.dark .kicker,.sec.dark .kicker{color:#E84393!important}
+/* links not by color alone */
+.prose a,article a,.lede a,p a:not(.btn):not(.btn-text):not(.btn-primary){text-decoration:underline;text-underline-offset:2px}
+</style>
 </head><body><nav id="nav">
   <a href="index.html" class="brand">UNAPOLOGETIC</a>
   <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
