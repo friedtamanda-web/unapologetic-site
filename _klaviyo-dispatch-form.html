@@ -1,8 +1,8 @@
 <!-- ============================================================
-     UL Dispatch — custom on-brand email capture → Klaviyo API
+     UL Dispatch, custom on-brand email capture → Klaviyo API
      Drop-in replacement for the Klaviyo embed in the Dispatch section.
      Needs ONE value: your Klaviyo LIST ID (replace LIST_ID_HERE).
-     Uses the public client endpoint (company_id Twvzce) — no secret key.
+     Uses the public client endpoint (company_id Twvzce), no secret key.
      ============================================================ -->
 <div class="kv-form" id="kvDispatch">
   <form id="kvDispatchForm" novalidate>
@@ -13,7 +13,7 @@
     <p class="kv-note" id="kvNote">Free. Arrives when there is something real to say.</p>
   </form>
   <div class="kv-success" id="kvSuccess" hidden>
-    <strong>You're in.</strong> Watch your inbox — the first letter is on its way.
+    <strong>You're in.</strong> Watch your inbox, the first letter is on its way.
   </div>
 </div>
 
@@ -59,11 +59,11 @@
         document.getElementById("kvDispatch").querySelector("form").hidden = true;
         document.getElementById("kvSuccess").hidden = false;
       } else {
-        note.textContent = "Something went wrong — try again."; note.classList.add("kv-err");
+        note.textContent = "Something went wrong, try again."; note.classList.add("kv-err");
         btn.disabled = false; btn.textContent = "Send me the letters";
       }
     }).catch(function(){
-      note.textContent = "Something went wrong — try again."; note.classList.add("kv-err");
+      note.textContent = "Something went wrong, try again."; note.classList.add("kv-err");
       btn.disabled = false; btn.textContent = "Send me the letters";
     });
   });

@@ -8,7 +8,6 @@
   <url><loc>https://theunapologeticleader.com/friday-conversations.html</loc><priority>0.9</priority></url>
   <url><loc>https://theunapologeticleader.com/amplify.html</loc><priority>0.7</priority></url>
   <url><loc>https://theunapologeticleader.com/essays.html</loc><priority>0.7</priority></url>
-  <url><loc>https://theunapologeticleader.com/signal.html</loc><priority>0.7</priority></url>
   <url><loc>https://theunapologeticleader.com/terms.html</loc><priority>0.3</priority></url>
   <url><loc>https://theunapologeticleader.com/privacy.html</loc><priority>0.3</priority></url>
   <url><loc>https://theunapologeticleader.com/messaging.html</loc><priority>0.3</priority></url>
@@ -38,4 +37,5 @@
   <url><loc>https://theunapologeticleader.com/what-am-i-carrying.html</loc><priority>0.8</priority></url>
   <url><loc>https://theunapologeticleader.com/the-movement.html</loc><priority>0.9</priority></url>
   <url><loc>https://theunapologeticleader.com/the-mission.html</loc><priority>0.8</priority></url>
+  <url><loc>https://theunapologeticleader.com/the-builders.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
