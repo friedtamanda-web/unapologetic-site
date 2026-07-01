@@ -82,6 +82,16 @@
   .foot-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:12px}
   .foot-links a{font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray)}
   .foot-links a:hover{color:var(--pink)}
+  /* uplift additions */
+  .hero-fig{margin:34px auto 0;max-width:920px;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.16)}
+  .hero-fig img{width:100%;display:block}
+  .pull{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.12;color:#fff;text-align:center;max-width:24ch;margin:30px auto 0}
+  .pull span{color:var(--pink)}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1000px;margin:0 auto}
+  @media(max-width:720px){.gallery{grid-template-columns:1fr}}
+  .gallery figure{margin:0}
+  .gallery img{width:100%;border-radius:14px;border:1px solid var(--line);display:block;aspect-ratio:4/3;object-fit:cover}
+  .gallery figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:8px;text-align:center}
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
@@ -119,13 +129,18 @@ h1 em,h2 em{font-style:italic!important;color:#E84393!important;font-weight:500}
 <header class="hero"><div class="wrap">
   <div class="kick">The Mission</div>
   <h1>Move the money to the <em>good people.</em></h1>
-  <p class="sub">Good people help good people, and good things happen. This is how value moves back to the ones who actually build.</p>
-  <div class="rule"></div>
+  <p class="sub">Good people help good people, and good things happen. This is abundance with a direction: value flowing back to the ones who actually build, lift, and give.</p>
+  <div class="cta-row">
+    <a href="the-movement.html#join" class="btn btn-primary">Join the movement</a>
+    <a href="#exchange" class="btn btn-text">See how it bends &rarr;</a>
+  </div>
+  <figure class="hero-fig"><img src="img/gathering-table-2.jpg" alt="Women gathered around a table in Detroit, laughing together over a shared meal." loading="lazy"></figure>
 </div></header>
 
 <section class="dark"><div class="wrap">
-  <div class="sec-head"><div class="eb">Why this exists</div><h2>Capital is leaking to the wrong hands.</h2>
-  <p>Too much of it flows to the people who photocopied an industry they never built. The mission is simple. Reroute it. Move the money, and the capability, back toward the builders, the family-owned, the mid-market, the ethical operators. The good people. Not as charity. As repair.</p></div>
+  <div class="sec-head"><div class="eb">Why this exists</div><h2>When good people win, everyone downstream wins.</h2>
+  <p>The mission is simple: move the money, and the capability, toward the builders, the family-owned, the mid-market, the ethical operators. The good people. When value lands in good hands, it doesn't stop there. It feeds the next builder, the next family, the next kid, the next cause. Not charity. A current, pointed the right way.</p></div>
+  <p class="pull"><span>Spread the love.</span> One percent at a time.</p>
 </div></section>
 
 <section><div class="wrap">
@@ -144,7 +159,7 @@ h1 em,h2 em{font-style:italic!important;color:#E84393!important;font-weight:500}
   </div>
 </div></section>
 
-<section class="dark"><div class="wrap">
+<section class="dark" id="exchange"><div class="wrap">
   <div class="sec-head"><div class="eb">How it bends</div><h2>It fits who you are.</h2></div>
   <div class="tiers">
     <div class="tier"><div class="who">VC-backed &amp; scaling</div><h3>Equity or project</h3><p>Let's talk equity and project work. I bet on builders I believe in.</p></div>
@@ -161,6 +176,16 @@ h1 em,h2 em{font-style:italic!important;color:#E84393!important;font-weight:500}
     <div class="mcard"><h4>Things that keep me whole</h4><ul><li>A yoga membership, personal training, anything that fills the cup back up</li><li>A stay at your Airbnb, a boat if you're feeling generous, a little adventure</li></ul></div>
     <div class="mcard"><h4>The joyfully ridiculous</h4><ul><li>A Jeep CJ7. A very pink Corvette. Fun clothes, always. DoorDash gift cards, unironically.</li><li>Or just back the cause. Donate, and let me go to work for you.</li></ul></div>
   </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><div class="eb">Where the overflow goes</div><h2>This is what a full cup pours into.</h2><p>Coats in winter. Classrooms with what they need. Rooms where women remember who they are. The money moves, and this is where it lands.</p></div>
+  <div class="gallery">
+    <figure><img src="photo-coatdrive.jpg" alt="Volunteers at a Detroit winter coat drive." loading="lazy"><figcaption>Winter coat drive</figcaption></figure>
+    <figure><img src="photo-classroom.jpg" alt="A Detroit classroom supported through One Step Forward." loading="lazy"><figcaption>One Step Forward · classrooms</figcaption></figure>
+    <figure><img src="photo-lighthouse.jpg" alt="A lighthouse against open sky, the guiding-light motif." loading="lazy"><figcaption>Be the lighthouse</figcaption></figure>
+  </div>
+  <p style="text-align:center;margin-top:24px"><a href="impact.html" class="btn btn-text">See the impact &rarr;</a></p>
 </div></section>
 
 <section style="padding-top:20px"><div class="wrap">

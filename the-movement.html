@@ -169,7 +169,7 @@ h1 em,h2 em,.hero em,.display em{font-style:italic!important;color:#E84393!impor
   <div class="sec-head"><div class="eb">Join the movement</div><h2>It's free. It always starts free.</h2>
   <p>Put your name in. You'll get the letters, the room, and the first word when we build something to fill cups.</p></div>
   <div class="pform" style="background:#211c18;border-color:#3A322E">
-    <form data-kl-event="Join the Movement">
+    <form data-kl-event="Join the Movement" data-kl-subscribe="TejKnW">
       <div class="row2"><div class="field"><label>Name</label><input name="name" type="text" required></div><div class="field"><label>Email</label><input name="email" type="email" required></div></div>
       <div class="field"><label>What do you build? (optional)</label><input name="build" type="text" placeholder="Founder, marketer, operator, the thing you make"></div>
       <button type="submit" class="btn btn-primary">I'm in</button>
@@ -208,6 +208,20 @@ document.addEventListener('submit',function(e){
   var email=p.email||p.Email||'';
   try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); } }catch(err){}
   var msg=document.createElement('p'); msg.className='form-note'; msg.style.cssText='font-size:1.05rem;margin-top:8px;color:#fff'; msg.textContent='You are in. Welcome to the movement.';
+  f.parentNode.insertBefore(msg,f.nextSibling); f.style.display='none';
+});
+</script>
+<script>/* kl-lead-handler v2: identify + track + native Klaviyo subscribe (consent) */
+document.addEventListener('submit',function(e){
+  var f=e.target; if(!f||!f.getAttribute||!f.getAttribute('data-kl-event'))return;
+  e.preventDefault();
+  var fd=new FormData(f),p={};
+  fd.forEach(function(v,k){ if(k.charAt(0)!=='_'&&v){ p[k]=p[k]?p[k]+', '+v:''+v; } });
+  var email=p.email||p.Email||'';
+  try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); } }catch(err){}
+  var listId=f.getAttribute('data-kl-subscribe');
+  if(listId&&email){ try{ fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Twvzce',{method:'POST',headers:{'Content-Type':'application/json','revision':'2024-10-15'},body:JSON.stringify({data:{type:'subscription',attributes:{profile:{data:{type:'profile',attributes:{email:email,subscriptions:{email:{marketing:{consent:'SUBSCRIBED'}}}}}}},relationships:{list:{data:{type:'list',id:listId}}}}})}); }catch(err){} }
+  var msg=document.createElement('p'); msg.className='form-note'; msg.style.cssText='font-size:1.05rem;margin-top:8px'; msg.textContent='Thank you, we got it. We will be in touch.';
   f.parentNode.insertBefore(msg,f.nextSibling); f.style.display='none';
 });
 </script>
