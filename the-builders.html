@@ -99,7 +99,7 @@
 <body>
 <nav><div class="nav-in">
   <a href="index.html" class="brand">UNAPOLOGETIC</a>
-  <div class="nav-links"><a href="about.html">About</a><a href="frameworks.html">Frameworks</a><a href="essays.html">Essays</a><a href="speaking.html">Speaking</a><a href="mentorship.html">Mentorship</a><a href="start-here.html" class="nav-cta">Start Here</a></div>
+  <div class="nav-links"><a href="about.html">About</a><a href="frameworks.html">Frameworks</a><a href="the-movement.html">The Movement</a><a href="the-builders.html">The Field Note</a><a href="mentorship.html">Mentorship</a><a href="community.html">Community</a><a href="#get" class="nav-cta">Get the field note</a></div>
 </div></nav>
 
 <header class="hero"><div class="wrap"><div class="hero-grid">
@@ -178,6 +178,7 @@ window.UL_getBuilders=function(){
     var kl=window.klaviyo=window.klaviyo||[];
     kl.push(['identify',{'$email':email,'brand':'Unapologetic Leader','source':'builders_field_note'}]);
     kl.push(['track','Builders Field Note',{'lead_magnet':'The Builders Are Going To Be Fine'}]);
+    try{window.klaviyo.push(['track','New Lead',{form:'Builders Field Note',brand:'Unapologetic Leader'}]);}catch(e){}
   }catch(e){}
   document.getElementById('bform').style.display='none';
   document.getElementById('berr').style.display='none';

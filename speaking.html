@@ -362,11 +362,11 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
       <span>SMX · Search Marketing Expo</span><span>TEDx</span><span>Janes of Digital</span><span>Together Digital</span><span>Fireside conversations</span><span>Award stages</span>
     </div>
     <div class="reveal" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;align-items:flex-end">
-      <img src="img/stage-sel.jpg" alt="Amanda Friedt on the main stage with Search Engine Land and Marketing Land backdrops." loading="lazy" style="height:240px;width:auto;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
-      <img src="img/award-stage.jpg" alt="Amanda Friedt at the US Search Awards with the Aimclear team." loading="lazy" style="height:240px;width:auto;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
-      <img src="img/award-2018.jpg" alt="Amanda Friedt at the 2018 US Search Awards with the Aimclear team." loading="lazy" style="height:240px;width:auto;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
-      <img src="img/award-2023.jpg" alt="Amanda Friedt at the 2023 US Search Awards with the Aimclear team." loading="lazy" style="height:240px;width:auto;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
-      <img src="img/award-landy.jpg" alt="Amanda Friedt on the Landy Awards red carpet, presented by Search Engine Land and Google." loading="lazy" style="height:240px;width:auto;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
+      <img src="img/stage-sel.jpg" alt="Amanda Friedt on the main stage with Search Engine Land and Marketing Land backdrops." loading="lazy" style="height:240px;width:auto;max-width:100%;object-fit:cover;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
+      <img src="img/award-stage.jpg" alt="Amanda Friedt at the US Search Awards with the Aimclear team." loading="lazy" style="height:240px;width:auto;max-width:100%;object-fit:cover;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
+      <img src="img/award-2018.jpg" alt="Amanda Friedt at the 2018 US Search Awards with the Aimclear team." loading="lazy" style="height:240px;width:auto;max-width:100%;object-fit:cover;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
+      <img src="img/award-2023.jpg" alt="Amanda Friedt at the 2023 US Search Awards with the Aimclear team." loading="lazy" style="height:240px;width:auto;max-width:100%;object-fit:cover;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
+      <img src="img/award-landy.jpg" alt="Amanda Friedt on the Landy Awards red carpet, presented by Search Engine Land and Google." loading="lazy" style="height:240px;width:auto;max-width:100%;object-fit:cover;border-radius:6px;box-shadow:0 12px 30px rgba(0,0,0,.12)">
     </div>
   </div>
 </section>
@@ -493,7 +493,7 @@ document.addEventListener('submit',function(e){
   var fd=new FormData(f),p={};
   fd.forEach(function(v,k){ if(k.charAt(0)!=='_'&&v){ p[k]=p[k]?p[k]+', '+v:''+v; } });
   var email=p.email||p.Email||'';
-  try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); } }catch(err){}
+  try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); window.klaviyo.push(['track','New Lead',Object.assign({form:f.getAttribute('data-kl-event'),brand:'Unapologetic Leader'},p)]); } }catch(err){}
   var msg=document.createElement('p'); msg.className='small'; msg.style.cssText='font-size:1.05rem;margin-top:12px;color:var(--ink)'; msg.textContent='Thank you. I have your inquiry and will be in touch.';
   f.parentNode.insertBefore(msg,f.nextSibling); f.style.display='none';
 });
