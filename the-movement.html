@@ -220,7 +220,7 @@ document.addEventListener('submit',function(e){
   var email=p.email||p.Email||'';
   try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); window.klaviyo.push(['track','New Lead',Object.assign({form:f.getAttribute('data-kl-event'),brand:'Unapologetic Leader'},p)]); } }catch(err){}
   var listId=f.getAttribute('data-kl-subscribe');
-  if(listId&&email){ try{ fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Twvzce',{method:'POST',headers:{'Content-Type':'application/json','revision':'2024-10-15'},body:JSON.stringify({data:{type:'subscription',attributes:{profile:{data:{type:'profile',attributes:{email:email,subscriptions:{email:{marketing:{consent:'SUBSCRIBED'}}}}}}},relationships:{list:{data:{type:'list',id:listId}}}}})}); }catch(err){} }
+  if(listId&&email){ try{ fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Twvzce',{method:'POST',headers:{'Content-Type':'application/json','revision':'2024-10-15'},body:JSON.stringify({data:{type:'subscription',attributes:{custom_source:(f.getAttribute('data-kl-event')||'Website'),profile:{data:{type:'profile',attributes:{email:email}}}},relationships:{list:{data:{type:'list',id:listId}}}}})}); }catch(err){} }
   var msg=document.createElement('p'); msg.className='form-note'; msg.style.cssText='font-size:1.05rem;margin-top:8px'; msg.textContent='Thank you, we got it. We will be in touch.';
   f.parentNode.insertBefore(msg,f.nextSibling); f.style.display='none';
 });
