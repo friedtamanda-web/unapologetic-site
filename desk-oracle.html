@@ -16,20 +16,11 @@
 <meta name="twitter:title" content="The Desk Oracle: 52 cards for people who carry too much">
 <meta name="twitter:description" content="Pull one card. Name the next move. Put something down. Pre-order the founding edition.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product","name":"The Desk Oracle","description":"A 52-card deck in four suits (Carrying, Permission, Becoming, Cultivation) for high-capacity people who carry too much. Each card names one next move.","brand":{"@type":"Brand","name":"Lipstick & Receipts"},"creator":{"@type":"Person","name":"Amanda Friedt","url":"https://theunapologeticleader.com/about"},"url":"https://theunapologeticleader.com/desk-oracle"}
+{"@context":"https://schema.org","@type":"Product","name":"The Desk Oracle","description":"A 52-card deck in four suits (Carrying, Permission, Becoming, Cultivation) for high-capacity people who carry too much. Each card names one next move.","brand":{"@type":"Brand","name":"Lipstick & Receipts"},"creator":{"@type":"Person","name":"Amanda Friedt","url":"https://theunapologeticleader.com/about"},"url":"https://theunapologeticleader.com/desk-oracle","image":"https://theunapologeticleader.com/img/desk-oracle-og.jpg","offers":{"@type":"Offer","price":"60.00","priceCurrency":"USD","availability":"https://schema.org/PreOrder","url":"https://theunapologeticleader.com/desk-oracle"}}
 </script>
 <meta name="theme-color" content="#F4EEE6">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="UNAPOLOGETIC">
-<meta property="og:title" content="The Unapologetic Leader: A Movement for People Who Carry Too Much">
-<meta property="og:description" content="The Unapologetic Leader is a movement for builders, leaders, and the over-functioning who carry what was never theirs. Put it down. Build what is next.">
-<meta property="og:url" content="https://theunapologeticleader.com/">
-<meta property="og:image" content="https://theunapologeticleader.com/img/desk-oracle-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Unapologetic Leader: A Movement for People Who Carry Too Much">
-<meta name="twitter:description" content="The Unapologetic Leader is a movement for builders, leaders, and the over-functioning who carry what was never theirs. Put it down. Build what is next.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
@@ -323,6 +314,29 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
 .do-faq p{margin-top:10px;color:var(--ink-soft);line-height:1.6;max-width:70ch}
 @media(max-width:900px){.do-hero .wrap{grid-template-columns:1fr}.do-stack{height:520px;max-width:480px}.do-suits{grid-template-columns:1fr 1fr}.do-steps{grid-template-columns:1fr}}
 @media(max-width:560px){.do-suits{grid-template-columns:1fr}.do-stack{transform:scale(.78);transform-origin:left top;height:410px}}
+
+.do-pull{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;margin-top:34px}
+.do-pull-card{position:relative;width:300px;aspect-ratio:2/3;border:2px solid #1A1614;box-shadow:10px 10px 0 #E84393;background:#1A1614;cursor:pointer;padding:0;display:block;overflow:hidden}
+.do-pull-card img{display:block;width:100%;height:100%;object-fit:cover}
+.do-pull-back{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#F4EEE6;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;background:repeating-linear-gradient(45deg,#1A1614 0 14px,#231d1a 14px 28px)}
+.do-pull-back b{font-family:'Archivo',system-ui,sans-serif;font-weight:900;font-size:1.9rem;letter-spacing:0;line-height:.95;text-align:center;color:#F4EEE6}
+.do-pull-back b span{background:#E84393;color:#1A1614;padding:0 6px}
+.do-pull-card.flip img{animation:doFlip .45s ease-out}
+@keyframes doFlip{from{opacity:0;transform:rotateY(70deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.do-pull-card.flip img{animation:none}}
+.do-pull-copy h3{font-family:'Archivo',system-ui,sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:.98;color:#1A1614}
+.do-pull-copy .ln{font-size:1.25rem;color:#1A1614;margin-top:10px}
+.do-pull-copy .st{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#b81c66}
+.do-pull-copy .do-form{margin-top:22px;max-width:520px}
+.do-ghost{background:transparent;color:#1A1614}
+.do-shop{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.do-shop a{display:flex;flex-direction:column;gap:10px;border:2px solid #1A1614;padding:22px 20px;background:#FBF7F1;color:#1A1614;text-decoration:none;min-height:190px}
+.do-shop a:hover,.do-shop a:focus-visible{box-shadow:8px 8px 0 #E84393;transform:translate(-2px,-2px)}
+.do-shop .pr{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#b81c66}
+.do-shop b{font-family:'Archivo',system-ui,sans-serif;font-weight:900;text-transform:uppercase;font-size:1.2rem;line-height:1.02}
+.do-shop span.go{margin-top:auto;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.do-pull{grid-template-columns:1fr;gap:30px}.do-shop{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.do-pull-card{width:min(300px,100%)}.do-shop{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -341,7 +355,7 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
       <p class="do-sub">Fifty-two cards for the days you are carrying too much. Pull one. Read the line. Make the one move it names. It takes less time than your coffee gets cold.</p>
       <div class="do-meta"><span>52 cards</span><span>4 suits</span><span>Jumbo 3.5&Prime; &times; 5&Prime;</span><span>Guidebook included</span></div>
       <div class="do-buy" id="buy">
-        <div class="do-price" id="doPrice" hidden></div>
+        <div class="do-price" id="doPrice">$60<small>founding edition &middot; reserve now, pay when pre-orders open</small></div>
         <a class="do-btn" id="doPreorder" href="#reserve" hidden>Pre-order the deck</a>
         <form class="do-form" id="reserve" data-kl-event="Desk Oracle Reserve" data-kl-subscribe="UpyBG6">
           <label for="do-email" style="position:absolute;left:-9999px">Email address</label>
@@ -374,6 +388,37 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
   </div>
 </section>
 
+<section class="do-sec" id="pull">
+  <div class="wrap">
+    <span class="eyebrow">Try it now</span>
+    <h2 style="margin-top:14px;max-width:20ch">Pull a <em>card</em>.</h2>
+    <div class="do-pull">
+      <button type="button" class="do-pull-card" id="pullCard" aria-label="Pull a card from the deck">
+        <span class="do-pull-back" id="pullBack"><b>The Desk <span>Oracle</span></b>Tap to pull</span>
+      </button>
+      <div class="do-pull-copy">
+        <div id="pullOut" aria-live="polite">
+          <span class="st">16 sample cards from the deck</span>
+          <h3 style="margin-top:10px">What do you need to hear today?</h3>
+          <p class="ln">Take a breath, think about the thing on your desk, and pull one.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+          <button type="button" class="do-btn" id="pullBtn">Pull a card</button>
+        </div>
+        <form class="do-form" id="pullForm" data-kl-event="Desk Oracle Card Pull Signup" data-kl-subscribe="UpyBG6">
+          <label for="pull-email" style="position:absolute;left:-9999px">Email address</label>
+          <input id="pull-email" type="email" name="email" placeholder="you@email.com" required autocomplete="email">
+          <input type="hidden" name="product" value="The Desk Oracle">
+          <input type="hidden" name="pulled_card" id="pulledCard" value="">
+          <button type="submit" class="do-btn do-ghost">Send me a card every Monday</button>
+        </form>
+        <p class="do-fine" style="margin-top:10px">One card and its next move, every Monday. You also hold a founding-edition spot. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section class="do-sec" style="background:var(--paper-2)">
   <div class="wrap">
     <span class="eyebrow">How to use it</span>
@@ -385,6 +430,16 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
     </div>
   </div>
 </section>
+
+<section class="do-sec" id="wear">
+  <div class="wrap">
+    <span class="eyebrow">While you wait for the deck</span>
+    <h2 style="margin-top:14px;max-width:22ch">Wear the <em>line</em>.</h2>
+    <p class="do-sub" style="margin-top:14px">The same sentences, on things you use every day. Made and shipped by Smart Girl Era.</p>
+    <div class="do-shop"><a href="https://smartgirlera.com/products/you-dont-have-to-earn-your-rest-tee-moon-floral-affirmation-shirt-self-care-boxy-top-burnout-recovery-gift-for-her?utm_source=theunapologeticleader&utm_medium=referral&utm_campaign=desk-oracle" data-shop="You Don’t Have to Earn Your Rest Tee"><span class="pr">Pairs with Rest Without Earning</span><b>You Don’t Have to Earn Your Rest Tee</b><span class="go">Shop at Smart Girl Era</span></a><a href="https://smartgirlera.com/products/elephant-sunflower-canvas-tote-strength-of-carrying-inspirational-tote-bag?utm_source=theunapologeticleader&utm_medium=referral&utm_campaign=desk-oracle" data-shop="Strength of Carrying Tote"><span class="pr">Pairs with the Carrying suit</span><b>Strength of Carrying Tote</b><span class="go">Shop at Smart Girl Era</span></a><a href="https://smartgirlera.com/products/spiral-notebook-ruled-line?utm_source=theunapologeticleader&utm_medium=referral&utm_campaign=desk-oracle" data-shop="A Smart Woman With Good Data Notebook"><span class="pr">For the desk the deck sits on</span><b>A Smart Woman With Good Data Notebook</b><span class="go">Shop at Smart Girl Era</span></a><a href="https://smartgirlera.com/products/you-dont-have-to-be-perfect-to-begin-tee-floral-affirmation-shirt-self-love-boxy-top-growth-mindset-gift-for-her?utm_source=theunapologeticleader&utm_medium=referral&utm_campaign=desk-oracle" data-shop="You Don’t Have to Be Perfect to Begin Tee"><span class="pr">Pairs with Begin Again</span><b>You Don’t Have to Be Perfect to Begin Tee</b><span class="go">Shop at Smart Girl Era</span></a></div>
+  </div>
+</section>
+
 
 <section class="do-sec do-faq">
   <div class="wrap" style="max-width:860px">
@@ -425,10 +480,31 @@ function showAll(){reveals.forEach(el=>el.classList.add('in'))}
 function showInView(){const h=innerHeight||document.documentElement.clientHeight;reveals.forEach(el=>{if(el.getBoundingClientRect().top<h*0.95)el.classList.add('in')})}
 try{if('IntersectionObserver' in window){const io=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -5% 0px'});reveals.forEach(el=>io.observe(el));showInView();requestAnimationFrame(showInView);addEventListener('scroll',showInView,{passive:true});setTimeout(showAll,1200)}else showAll()}catch(e){showAll()}
 </script>
+<script>/* Desk Oracle: pull a card */
+(function(){
+  var D=[{"s": "put-it-down", "u": "Carrying", "t": "Put It Down", "l": "It was never all yours."}, {"s": "laundry-mountain", "u": "Carrying", "t": "Laundry Mountain", "l": "Still not a moral failure."}, {"s": "cold-coffee", "u": "Carrying", "t": "Cold Coffee", "l": "You were doing too much again."}, {"s": "the-competence-tax", "u": "Carrying", "t": "The Competence Tax", "l": "Being capable is not consent."}, {"s": "rest-without-earning", "u": "Permission", "t": "Rest Without Earning", "l": "No receipt required."}, {"s": "no-is-a-complete-project-plan", "u": "Permission", "t": "No Is a Complete Project Plan", "l": "Scope protected."}, {"s": "the-duck", "u": "Permission", "t": "The Duck", "l": "Let it roll off. Keep moving with the water."}, {"s": "choose-yourself", "u": "Permission", "t": "Choose Yourself", "l": "You are also one of the people you care for."}, {"s": "scared-counts", "u": "Becoming", "t": "Scared Counts", "l": "Courage can shake."}, {"s": "plot-twist-still-here", "u": "Becoming", "t": "Plot Twist: Still Here", "l": "Rude of life. Impressive of you."}, {"s": "green-pool-season", "u": "Becoming", "t": "Green Pool Season", "l": "Sometimes survival is ugly and chlorinated."}, {"s": "begin-again", "u": "Becoming", "t": "Begin Again", "l": "You kept the wisdom."}, {"s": "you-cant-water-rocks", "u": "Cultivation", "t": "You Can’t Water Rocks", "l": "Stop confusing effort with evidence."}, {"s": "choose-the-soil", "u": "Cultivation", "t": "Choose the Soil", "l": "Environment is information."}, {"s": "bloom-later", "u": "Cultivation", "t": "Bloom Later", "l": "Late is a calendar word."}, {"s": "rest-is-part-of-growth", "u": "Cultivation", "t": "Rest Is Part of Growth", "l": "Dormant is not dead."}], last=-1;
+  var card=document.getElementById('pullCard'), out=document.getElementById('pullOut'), btn=document.getElementById('pullBtn'), hid=document.getElementById('pulledCard');
+  if(!card) return;
+  function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+  function pull(){
+    var i; do{ i=Math.floor(Math.random()*D.length); }while(D.length>1 && i===last); last=i;
+    var c=D[i];
+    card.innerHTML='<picture><source srcset="/img/desk-oracle-'+c.s+'.webp" type="image/webp"><img src="/img/desk-oracle-'+c.s+'.jpg" width="600" height="900" alt="Desk Oracle card, '+esc(c.u)+' suit: '+esc(c.t)+'. '+esc(c.l)+'"></picture>';
+    card.classList.remove('flip'); void card.offsetWidth; card.classList.add('flip');
+    card.setAttribute('aria-label','Pull another card');
+    out.innerHTML='<span class="st">'+esc(c.u)+' &middot; The Desk Oracle</span><h3 style="margin-top:10px">'+esc(c.t)+'</h3><p class="ln">'+esc(c.l)+'</p>';
+    btn.textContent='Pull again'; if(hid) hid.value=c.t;
+    try{window.gtag&&gtag('event','desk_oracle_pull',{card:c.t,suit:c.u});}catch(e){}
+    try{window.klaviyo&&window.klaviyo.push(['track','Desk Oracle Card Pulled',{card:c.t,suit:c.u}]);}catch(e){}
+  }
+  card.addEventListener('click',pull); btn.addEventListener('click',pull);
+  document.querySelectorAll('.do-shop a').forEach(function(a){a.addEventListener('click',function(){try{window.gtag&&gtag('event','select_item',{item_list_name:'Desk Oracle wear the line',items:[{item_name:a.getAttribute('data-shop')}]});}catch(e){}});});
+})();
+</script>
 <script>/* Desk Oracle checkout switch: paste the Stripe Payment Link + price to turn pre-orders on */
 (function(){
   var STRIPE_PREORDER_URL='';   // e.g. https://buy.stripe.com/xxxxxxxx
-  var PRICE='';                 // e.g. $44
+  var PRICE='$60';
   var ok=/^https:\/\/buy\.stripe\.com\//.test(STRIPE_PREORDER_URL);
   if(!ok) return; // no link yet: page runs as a reserve list
   var b=document.getElementById('doPreorder'), pr=document.getElementById('doPrice'), fine=document.getElementById('doFine'), f=document.getElementById('reserve');
