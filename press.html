@@ -85,6 +85,15 @@ footer{background:var(--black);color:var(--on-dark);padding:78px 0 44px}
 .foot-links{display:flex;gap:22px;flex-wrap:wrap}
 .foot-links a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);transition:color .3s}
 .foot-links a:hover{color:var(--pink)}
+.pk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.pk-item{margin:0;border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px;display:flex;flex-direction:column}
+.pk-item a{display:block}
+.pk-item img{display:block;width:100%;height:220px;object-fit:cover;object-position:center top;border-radius:8px;background:#f2ede6}
+.pk-item figcaption{font-size:.86rem;line-height:1.4;color:var(--ink);margin-top:10px}
+.pk-item figcaption span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+.pk-item figcaption span a{display:inline;color:#b81c66;text-decoration:underline}
+@media(max-width:760px){.pk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.pk-grid{grid-template-columns:1fr}.pk-item img{height:auto;aspect-ratio:4/5}}
 </style>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -144,8 +153,8 @@ h1 em,h2 em,.hero em,.h em{font-style:italic!important;color:#E84393!important;f
   <div class="eyebrow">Bios</div>
   <h2 class="h" style="margin:12px 0 6px">Three lengths. Copy-paste ready.</h2>
   <p style="color:var(--ink-soft);margin-bottom:22px">Pick what fits your format. Version noted on each.</p>
-  <div class="biocard reveal"><span class="tag">Short &middot; ~50 words</span><p>Amanda Friedt is a Detroit-based growth operator, speaker, and founder of The Unapologetic Leader and FRDTLAB. A six-time PPC Hero Top 25 honoree and mainstage speaker at SMX and brightonSEO, she writes and speaks on AI-era marketing and the human cost of being the capable one.</p></div>
-  <div class="biocard reveal"><span class="tag">Medium &middot; ~100 words</span><p>Amanda Friedt (professionally also known as Amanda Farley) is a growth and marketing operator with two decades across agency, investor-backed, and founder-led environments. She is the founder of The Unapologetic Leader, a movement for high-capacity women who carry what was never theirs, and FRDTLAB, an intelligence lab for AI-era marketing infrastructure. She has been named a PPC Hero Top 25 Most Influential PPC Expert six times and a TrueClicks Top 50 PPC expert, with bylines in Search Engine Land and MarTech and mainstage talks at SMX, brightonSEO, and TEDx. She lives and builds in metro Detroit.</p></div>
+  <div class="biocard reveal"><span class="tag">Short &middot; ~50 words</span><p>Amanda Friedt is a Detroit-based growth operator, speaker, and founder of The Unapologetic Leader and FRDTLAB. A 4x 2026 US Search Awards winner, six-time PPC Hero Top 25 honoree, and mainstage speaker at SMX, Hero Conf, and brightonSEO, she writes and speaks on AI-era marketing and the human cost of being the capable one.</p></div>
+  <div class="biocard reveal"><span class="tag">Medium &middot; ~100 words</span><p>Amanda Friedt (professionally also known as Amanda Farley) is a growth and marketing operator with two decades across agency, investor-backed, and founder-led environments. She is the founder of The Unapologetic Leader, a movement for high-capacity women who carry what was never theirs, and FRDTLAB, an intelligence lab for AI-era marketing infrastructure. She is a 4x 2026 US Search Awards winner for programs she led, and has been named a PPC Hero Top 25 Most Influential PPC Expert six times and a TrueClicks Top 50 PPC expert, with bylines in Search Engine Land and MarTech and mainstage talks at SMX, Hero Conf, brightonSEO, and TEDx. She lives and builds in metro Detroit.</p></div>
   <div class="note reveal"><b>Long bio (~200 words):</b> assembled from the two above plus the signature-keynote paragraph on the speaking page, held for Amanda&rsquo;s read before it ships. The long bio is the one journalists lift verbatim, so it goes live only after her sign-off.</div>
 </div></section>
 
@@ -154,12 +163,9 @@ h1 em,h2 em,.hero em,.h em{font-style:italic!important;color:#E84393!important;f
   <div class="eyebrow">On stage</div>
   <h2 class="h" style="margin:12px 0 6px">Main-stage and featured talks.</h2>
   <p style="color:var(--ink-soft);margin-bottom:20px">The conferences where search and AI marketing get decided.</p>
-  <div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:8px">Upcoming</div>
-  <div class="rec" style="margin-bottom:26px">
-    <div class="row"><span><b>brightonSEO / Hero Conf San Diego</b> <span class="meta">&middot; Mainstage &middot; Sep 14&ndash;16, 2026 &middot; San Diego</span></span></div>
-  </div>
   <div style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:8px">Record</div>
   <div class="rec">
+    <div class="row"><span><b>Hero Conf / brightonSEO San Diego</b> <span class="meta">&middot; Mainstage, &ldquo;The AI-powered marketing machine&rdquo; &middot; September 2026 &middot; San Diego</span></span></div>
     <div class="row"><span><b>SMX Advanced</b> <span class="meta">&middot; Speaker, &ldquo;The AI-powered marketing machine&rdquo; &middot; Boston, June 2026</span></span><a href="https://searchengineland.com/smx/advanced" target="_blank" rel="noopener">Event</a></div>
     <div class="row"><span><b>SMX</b> <span class="meta">&middot; Speaker &middot; San Jose, 2018</span></span><a href="https://www.crunchbase.com/person/amanda-farley" target="_blank" rel="noopener">Source</a></div>
     <div class="row"><span><b>Speaking &amp; conference history</b> <span class="meta">&middot; SMX, Hero Conf, Pubcon, and more</span></span><a href="https://ppchero.com/speaker/amanda-farley/" target="_blank" rel="noopener">Profile</a></div>
@@ -195,15 +201,16 @@ h1 em,h2 em,.hero em,.h em{font-style:italic!important;color:#E84393!important;f
   <h2 class="h" style="margin:12px 0 6px">The record, kept honest.</h2>
   <p style="color:var(--ink-soft);margin-bottom:8px"><b style="color:var(--ink)">Individual recognition.</b></p>
   <div class="rec" style="margin-bottom:26px">
+    <div class="row"><span><b>US Search Awards 2026</b> <span class="meta">&middot; 4x winner, for programs she led</span></span></div>
     <div class="row"><span><b>PPC Hero Top 25 Most Influential PPC Experts</b> <span class="meta">&middot; Named six times</span></span><a href="https://ppchero.com/speaker/amanda-farley/" target="_blank" rel="noopener">Profile</a></div>
     <div class="row"><span><b>TrueClicks Top 50 PPC Experts</b> <span class="meta">&middot; 2024, 2025</span></span></div>
     <div class="row"><span><b>Ragan / PR Daily Top Women in Marketing</b> <span class="meta">&middot; Agency Leader &middot; 2024 &middot; City Winery NYC</span></span><a href="https://www.ragan.com/awards/events/top-women-in-marketing-awards-luncheon-2024/" target="_blank" rel="noopener">Source</a></div>
   </div>
-  <p style="color:var(--ink-soft);margin-bottom:8px"><b style="color:var(--ink)">Team wins, from the agency years.</b></p>
+  <p style="color:var(--ink-soft);margin-bottom:8px"><b style="color:var(--ink)">Earlier team wins, from the agency years.</b></p>
   <div class="rec">
     <div class="row"><span><b>US Search Awards</b> <span class="meta">&middot; Won with the Aimclear team</span></span></div>
   </div>
-  <p style="color:var(--ink-soft);font-size:.92rem;margin-top:14px;line-height:1.6">Listed here deliberately: these are agency-level awards, and this page never claims them individually. The award-night photos carry the same framing, &ldquo;with the Aimclear team.&rdquo;</p>
+  <p style="color:var(--ink-soft);font-size:.92rem;margin-top:14px;line-height:1.6">Listed here deliberately: the agency-era trophies belong to the Aimclear team, and this page never claims them individually. The 2026 wins are credited to the programs she led. The award-night photos carry the same framing, &ldquo;with the Aimclear team.&rdquo;</p>
 </div></section>
 
 <!-- FIND ME / CORROBORATION HUB -->
@@ -228,7 +235,24 @@ h1 em,h2 em,.hero em,.h em{font-style:italic!important;color:#E84393!important;f
 <section class="sec sec-2" style="border-top:1px solid var(--line)"><div class="wrap" style="max-width:820px">
   <div class="eyebrow">Press photos &amp; assets</div>
   <h2 class="h" style="margin:12px 0 6px">Downloadable, captioned, credit noted.</h2>
-  <p style="color:var(--ink-soft);line-height:1.7">Current headshot, SMX mainstage, and the award-night set (captioned &ldquo;US Search Awards with the Aimclear team&rdquo;). The San Diego mainstage set leads this section after September. Logo files: the Unapologetic circled-U mark and the FRDTLAB F/ mark.</p>
+  <p style="color:var(--ink-soft);line-height:1.7">Headshot, stage, and award-night photos. Click any image to download the full-size file. Captions are ready to use; award-night photos keep the &ldquo;with the Aimclear team&rdquo; framing. The 2026 San Diego mainstage photos join this set as soon as photographer credit is cleared. Logo files: the Unapologetic circled-U mark and the FRDTLAB F/ mark, on request.</p>
+  <div class="pk-grid">
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-headshot.jpg" download aria-label="Download full-size: Amanda Friedt, headshot"><picture><source srcset="/img/press/amanda-friedt-headshot-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-headshot-sm.jpg" width="600" height="600" alt="Amanda Friedt, headshot" loading="lazy" decoding="async"></picture></a>
+      <figcaption>Headshot<span><a href="/img/press/amanda-friedt-headshot.jpg" download>Download</a> &middot; 600&times;600</span></figcaption></figure>
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-smx-mainstage-misfire.jpg" download aria-label="Download full-size: Amanda Friedt presenting on the SMX main stage in a hot-pink dress beside the talk title The Misfire: Siloed Teams and PPC/SEO"><picture><source srcset="/img/press/amanda-friedt-smx-mainstage-misfire-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-smx-mainstage-misfire-sm.jpg" width="482" height="640" alt="Amanda Friedt presenting on the SMX main stage in a hot-pink dress beside the talk title The Misfire: Siloed Teams and PPC/SEO" loading="lazy" decoding="async"></picture></a>
+      <figcaption>SMX mainstage, &ldquo;The Misfire: Siloed Teams &amp; PPC/SEO&rdquo;<span><a href="/img/press/amanda-friedt-smx-mainstage-misfire.jpg" download>Download</a> &middot; 771&times;1024</span></figcaption></figure>
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-smx-stage.jpg" download aria-label="Download full-size: Amanda Friedt presenting on the main stage at SMX Search Marketing Expo"><picture><source srcset="/img/press/amanda-friedt-smx-stage-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-smx-stage-sm.jpg" width="640" height="480" alt="Amanda Friedt presenting on the main stage at SMX Search Marketing Expo" loading="lazy" decoding="async"></picture></a>
+      <figcaption>SMX Search Marketing Expo, main stage<span><a href="/img/press/amanda-friedt-smx-stage.jpg" download>Download</a> &middot; 1400&times;1050</span></figcaption></figure>
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-main-stage-sel.jpg" download aria-label="Download full-size: Amanda Friedt on the main stage with Search Engine Land and Marketing Land backdrops"><picture><source srcset="/img/press/amanda-friedt-main-stage-sel-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-main-stage-sel-sm.jpg" width="640" height="296" alt="Amanda Friedt on the main stage with Search Engine Land and Marketing Land backdrops" loading="lazy" decoding="async"></picture></a>
+      <figcaption>Main stage, Search Engine Land &amp; Marketing Land<span><a href="/img/press/amanda-friedt-main-stage-sel.jpg" download>Download</a> &middot; 1080&times;500</span></figcaption></figure>
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-podium.jpg" download aria-label="Download full-size: Amanda Friedt presenting from a podium"><picture><source srcset="/img/press/amanda-friedt-podium-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-podium-sm.jpg" width="480" height="640" alt="Amanda Friedt presenting from a podium" loading="lazy" decoding="async"></picture></a>
+      <figcaption>At the podium<span><a href="/img/press/amanda-friedt-podium.jpg" download>Download</a> &middot; 1000&times;1333</span></figcaption></figure>
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-us-search-awards.jpg" download aria-label="Download full-size: Amanda Friedt at the US Search Awards, award in hand, with the Aimclear team"><picture><source srcset="/img/press/amanda-friedt-us-search-awards-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-us-search-awards-sm.jpg" width="299" height="640" alt="Amanda Friedt at the US Search Awards, award in hand, with the Aimclear team" loading="lazy" decoding="async"></picture></a>
+      <figcaption>US Search Awards, with the Aimclear team<span><a href="/img/press/amanda-friedt-us-search-awards.jpg" download>Download</a> &middot; 560&times;1200</span></figcaption></figure>
+    <figure class="pk-item"><a href="/img/press/amanda-friedt-landy-awards.jpg" download aria-label="Download full-size: Amanda Friedt on the Landy Awards red carpet, presented by Search Engine Land and Google"><picture><source srcset="/img/press/amanda-friedt-landy-awards-sm.webp" type="image/webp"><img src="/img/press/amanda-friedt-landy-awards-sm.jpg" width="295" height="640" alt="Amanda Friedt on the Landy Awards red carpet, presented by Search Engine Land and Google" loading="lazy" decoding="async"></picture></a>
+      <figcaption>Landy Awards red carpet, Search Engine Land &amp; Google<span><a href="/img/press/amanda-friedt-landy-awards.jpg" download>Download</a> &middot; 554&times;1200</span></figcaption></figure>
+  </div>
+  <p style="color:var(--ink-soft);font-size:.9rem;margin-top:14px">Credit line: &ldquo;Courtesy of Amanda Friedt&rdquo; unless a photographer is named.</p>
   <p style="color:var(--ink-soft);margin-top:14px"><em style="font-style:italic;color:var(--pink)">Media may use these images with credit. For anything else, ask; the answer is usually yes.</em> Request assets at <a href="mailto:hello@frdtlab.com" style="color:var(--pink);font-weight:600">hello@frdtlab.com</a>.</p>
 </div></section>
 
