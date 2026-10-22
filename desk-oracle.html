@@ -11,7 +11,7 @@
 <meta property="og:title" content="The Desk Oracle: 52 cards for people who carry too much">
 <meta property="og:description" content="Pull one card. Name the next move. Put something down. Pre-order the founding edition.">
 <meta property="og:url" content="https://theunapologeticleader.com/desk-oracle">
-<meta property="og:image" content="https://theunapologeticleader.com/og-image.jpg">
+<meta property="og:image" content="https://theunapologeticleader.com/img/desk-oracle-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Desk Oracle: 52 cards for people who carry too much">
 <meta name="twitter:description" content="Pull one card. Name the next move. Put something down. Pre-order the founding edition.">
@@ -26,7 +26,7 @@
 <meta property="og:title" content="The Unapologetic Leader: A Movement for People Who Carry Too Much">
 <meta property="og:description" content="The Unapologetic Leader is a movement for builders, leaders, and the over-functioning who carry what was never theirs. Put it down. Build what is next.">
 <meta property="og:url" content="https://theunapologeticleader.com/">
-<meta property="og:image" content="https://theunapologeticleader.com/og-image.jpg">
+<meta property="og:image" content="https://theunapologeticleader.com/img/desk-oracle-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Unapologetic Leader: A Movement for People Who Carry Too Much">
 <meta name="twitter:description" content="The Unapologetic Leader is a movement for builders, leaders, and the over-functioning who carry what was never theirs. Put it down. Build what is next.">
@@ -300,20 +300,15 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
 .do-form{display:flex;gap:10px;flex-wrap:wrap}
 .do-form input{flex:1 1 200px;padding:16px;font:inherit;border:2px solid #1A1614;background:#fff;color:#1A1614}
 .do-fine{font-size:.88rem;color:var(--ink-soft);line-height:1.5}
-.do-stack{position:relative;height:460px}
-.do-card{position:absolute;width:210px;height:300px;background:#FBF7F1;border:2px solid #1A1614;padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:8px 8px 0 #1A1614}
-.do-card .s{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#b81c66}
-.do-card h3{font-family:'Archivo',system-ui,sans-serif;font-weight:900;text-transform:uppercase;font-size:1.55rem;line-height:.95;color:#1A1614}
-.do-card h3 span{background:#E84393;padding:0 6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.do-card p{font-size:1rem;color:#1A1614}
-.do-card .f{font-size:.7rem;color:var(--ink-soft)}
-.do-card:nth-child(1){left:0;top:70px;transform:rotate(-7deg)}
-.do-card:nth-child(2){left:125px;top:10px;transform:rotate(2deg)}
-.do-card:nth-child(3){left:245px;top:100px;transform:rotate(8deg);background:#1A1614;border-color:#1A1614;box-shadow:8px 8px 0 #E84393}
-.do-card:nth-child(3) h3,.do-card:nth-child(3) p{color:#F4EEE6}
-.do-card:nth-child(3) .s{color:#E84393}
-.do-card:nth-child(3) .f{color:#B8AEA4}
-.do-sec{padding:80px 0;border-top:1px solid var(--line)}
+.do-stack{position:relative;height:510px}
+.do-card{position:absolute;width:220px;aspect-ratio:2/3;border:2px solid #1A1614;box-shadow:8px 8px 0 #1A1614;background:#FBF7F1;overflow:hidden;margin:0}
+.do-card picture{display:block;height:100%}
+.do-card img{display:block;width:100%;height:100%;object-fit:cover}
+.do-card:nth-child(1){left:0;top:80px;transform:rotate(-7deg)}
+.do-card:nth-child(2){left:130px;top:10px;transform:rotate(2deg);z-index:2}
+.do-card:nth-child(3){left:255px;top:110px;transform:rotate(8deg);box-shadow:8px 8px 0 #E84393;z-index:3}
+.do-note{position:absolute;left:0;top:485px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.do-suit-art{display:block;width:100%;aspect-ratio:2/3;object-fit:cover;border:2px solid #1A1614;margin:-4px 0 18px;background:#FBF7F1}
 .do-suits{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
 .do-suit{border:2px solid #1A1614;padding:24px 20px;background:var(--paper-2)}
 .do-suit h3{font-family:'Archivo',system-ui,sans-serif;font-weight:900;text-transform:uppercase;font-size:1.4rem;color:#1A1614}
@@ -326,8 +321,8 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
 .do-faq details{border-top:1px solid var(--line);padding:18px 0}
 .do-faq summary{cursor:pointer;font-weight:600;font-size:1.08rem;color:#1A1614}
 .do-faq p{margin-top:10px;color:var(--ink-soft);line-height:1.6;max-width:70ch}
-@media(max-width:900px){.do-hero .wrap{grid-template-columns:1fr}.do-stack{height:420px;max-width:440px}.do-suits{grid-template-columns:1fr 1fr}.do-steps{grid-template-columns:1fr}}
-@media(max-width:560px){.do-suits{grid-template-columns:1fr}.do-stack{transform:scale(.82);transform-origin:left top;height:360px}}
+@media(max-width:900px){.do-hero .wrap{grid-template-columns:1fr}.do-stack{height:520px;max-width:480px}.do-suits{grid-template-columns:1fr 1fr}.do-steps{grid-template-columns:1fr}}
+@media(max-width:560px){.do-suits{grid-template-columns:1fr}.do-stack{transform:scale(.78);transform-origin:left top;height:410px}}
 </style>
 </head>
 <body>
@@ -357,10 +352,11 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
         <p class="do-fine" id="doFine">Founding edition is a limited first print. Reserve your spot and you get first access and founding pricing before it opens to everyone.</p>
       </div>
     </div>
-    <div class="do-stack" aria-hidden="true">
-      <div class="do-card"><span class="s">Carrying &middot; 01</span><h3><span>Put it</span> down</h3><p>It was never all yours.</p><span class="f">&copy; Amanda Friedt</span></div>
-      <div class="do-card"><span class="s">Permission &middot; 12</span><h3>Rest without <span>earning</span></h3><p>No receipt required.</p><span class="f">&copy; Amanda Friedt</span></div>
-      <div class="do-card"><span class="s">Becoming &middot; 05</span><h3>Scared <span>counts</span></h3><p>Courage can shake.</p><span class="f">&copy; Amanda Friedt</span></div>
+    <div class="do-stack">
+      <figure class="do-card"><picture><source srcset="/img/desk-oracle-put-it-down.webp" type="image/webp"><img src="/img/desk-oracle-put-it-down.jpg" width="600" height="900" alt="Desk Oracle card, Carrying suit: Put It Down. It was never all yours." loading="lazy" decoding="async"></picture></figure>
+      <figure class="do-card"><picture><source srcset="/img/desk-oracle-rest-without-earning.webp" type="image/webp"><img src="/img/desk-oracle-rest-without-earning.jpg" width="600" height="900" alt="Desk Oracle card, Permission suit: Rest Without Earning. No receipt required." fetchpriority="high" decoding="async"></picture></figure>
+      <figure class="do-card"><picture><source srcset="/img/desk-oracle-scared-counts.webp" type="image/webp"><img src="/img/desk-oracle-scared-counts.jpg" width="600" height="900" alt="Desk Oracle card, Becoming suit: Scared Counts. Courage can shake." loading="lazy" decoding="async"></picture></figure>
+      <span class="do-note">Concept art &middot; final deck may vary</span>
     </div>
   </div>
 </header>
@@ -370,10 +366,10 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
     <span class="eyebrow">Four suits &middot; thirteen cards each</span>
     <h2 style="margin-top:14px;max-width:20ch">One deck. Four <em>jobs</em>.</h2>
     <div class="do-suits">
-      <div class="do-suit"><h3>Carrying</h3><p>For sorting what is yours from what landed on you.</p><ul><li>The Competence Tax: being capable is not consent.</li><li>Return to Sender: wrong address.</li><li>Enough for Today: the list can survive the night.</li></ul></div>
-      <div class="do-suit"><h3>Permission</h3><p>For the moves you keep waiting for someone else to approve.</p><ul><li>Change Your Mind: new information is allowed.</li><li>No Is a Complete Project Plan: scope protected.</li><li>Choose Yourself.</li></ul></div>
-      <div class="do-suit"><h3>Becoming</h3><p>For the in-between seasons nobody posts about.</p><ul><li>One More Step: most of us took it scared.</li><li>Plot Twist: Still Here.</li><li>Become Visible.</li></ul></div>
-      <div class="do-suit"><h3>Cultivation</h3><p>For growing what matters without dragging it.</p><ul><li>You Can&rsquo;t Water Rocks: stop confusing effort with evidence.</li><li>Choose the Soil: environment is information.</li><li>Harvest the Evidence.</li></ul></div>
+      <div class="do-suit"><picture><source srcset="/img/desk-oracle-put-it-down.webp" type="image/webp"><img class="do-suit-art" src="/img/desk-oracle-put-it-down.jpg" width="600" height="900" alt="Put It Down card art" loading="lazy" decoding="async"></picture><h3>Carrying</h3><p>For sorting what is yours from what landed on you.</p><ul><li>The Competence Tax: being capable is not consent.</li><li>Return to Sender: wrong address.</li><li>Enough for Today: the list can survive the night.</li></ul></div>
+      <div class="do-suit"><picture><source srcset="/img/desk-oracle-rest-without-earning.webp" type="image/webp"><img class="do-suit-art" src="/img/desk-oracle-rest-without-earning.jpg" width="600" height="900" alt="Rest Without Earning card art" loading="lazy" decoding="async"></picture><h3>Permission</h3><p>For the moves you keep waiting for someone else to approve.</p><ul><li>Change Your Mind: new information is allowed.</li><li>No Is a Complete Project Plan: scope protected.</li><li>Choose Yourself.</li></ul></div>
+      <div class="do-suit"><picture><source srcset="/img/desk-oracle-scared-counts.webp" type="image/webp"><img class="do-suit-art" src="/img/desk-oracle-scared-counts.jpg" width="600" height="900" alt="Scared Counts card art" loading="lazy" decoding="async"></picture><h3>Becoming</h3><p>For the in-between seasons nobody posts about.</p><ul><li>One More Step: most of us took it scared.</li><li>Plot Twist: Still Here.</li><li>Become Visible.</li></ul></div>
+      <div class="do-suit"><picture><source srcset="/img/desk-oracle-you-cant-water-rocks.webp" type="image/webp"><img class="do-suit-art" src="/img/desk-oracle-you-cant-water-rocks.jpg" width="600" height="900" alt="You Can’t Water Rocks card art" loading="lazy" decoding="async"></picture><h3>Cultivation</h3><p>For growing what matters without dragging it.</p><ul><li>You Can&rsquo;t Water Rocks: stop confusing effort with evidence.</li><li>Choose the Soil: environment is information.</li><li>Harvest the Evidence.</li></ul></div>
     </div>
   </div>
 </section>
