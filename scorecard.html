@@ -50,6 +50,18 @@ h1 em{font-style:normal;color:var(--pink)}
 #result{margin:40px 0 10px;text-align:center;scroll-margin-top:90px}
 .next-step{scroll-margin-top:90px}
 .next-step:focus-visible,#result:focus-visible{outline:2px solid var(--ink);outline-offset:5px}
+.workbook{border-top:1px solid var(--line);background:var(--paper-2);padding:36px 0}
+.workbook .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,250px);gap:32px;align-items:center}
+.workbook h2{font-size:clamp(1.8rem,4vw,2.65rem);line-height:1.1;margin:10px 0 12px}
+.workbook p{max-width:43ch;color:var(--ink-soft)}
+.workbook .btn{margin-top:18px}
+.workbook img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px}
+.workbook figcaption{margin-top:6px;font-size:.9rem;text-align:center}
+.workbook figcaption a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:620px){
+  .workbook .wrap{grid-template-columns:1fr;gap:22px}
+  .workbook figure{max-width:300px}
+}
 .tier{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(1.8rem,5vw,2.8rem);line-height:1.05;margin:10px 0;color:var(--pink-deep)}
 .scorenum{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
 .bar{height:10px;background:var(--paper-2);border-radius:30px;overflow:hidden;margin:18px 0;border:1px solid var(--line)}
@@ -158,19 +170,27 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
     <p class="verdict" id="verdict"></p>
     <div class="move"><b>What to set down first</b><span id="move"></span></div>
     <div class="cta">
-      <a class="btn btn-primary" href="#workbook">Explore the 14-day workbook</a>
+      <a class="btn btn-primary" href="#workbook">Explore Whose Is This?</a>
       <a class="btn btn-ghost" href="#score-capture" data-journey-event="tul_dispatch_click">Get the Dispatch by email</a>
     </div>
     <button type="button" class="retake" onclick="location.reload()">Retake the scorecard</button>
   </section>
 </main>
 
-<section class="sec next-step" id="workbook" aria-labelledby="workbook-title" tabindex="-1" style="border-top:1px solid var(--line);background:var(--paper-2);padding:34px 0"><div class="wrap" style="max-width:800px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
-  <div style="flex:1 1 340px"><div class="eyebrow" style="color:var(--pink-deep)">The workbook</div>
-  <h2 id="workbook-title" style="font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.3rem);letter-spacing:-.02em;margin:10px 0 8px;color:var(--ink)">Caring vs. Carrying</h2>
-  <p style="color:var(--ink-soft);line-height:1.6;margin:0">Use the two-pile sort to see what belongs to you. Then practice handing back one thing at a time over 14 days. Downloadable PDF.</p></div>
-  <a class="btn btn-primary" href="https://unapologeticleader.gumroad.com/l/vzzds" data-journey-event="tul_workbook_click">View workbook · $24</a>
-</div></section>
+<section class="workbook next-step" id="workbook" aria-labelledby="workbook-title" tabindex="-1">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">The Caring vs. Carrying Workbook</div>
+      <h2 id="workbook-title">Whose Is This?</h2>
+      <p>Sort one thing you’re carrying into what’s yours and what someone else owns. Over 14 days, practice handing back one responsibility and decide what support you’ll offer. Downloadable PDF.</p>
+      <a class="btn btn-primary" href="https://unapologeticleader.gumroad.com/l/vzzds" data-journey-event="tul_workbook_click">View workbook · $24</a>
+    </div>
+    <figure>
+      <img src="/img/whose-is-this-two-pile-sort.webp" alt="The Two-Pile Sort worksheet. A project example places sending the agreed notes under Mine and chasing every owner’s update under Not mine, followed by space to try the sort." width="700" height="1000" loading="lazy" decoding="async">
+      <figcaption><a href="/img/whose-is-this-two-pile-sort.webp">View full-size sample page</a></figcaption>
+    </figure>
+  </div>
+</section>
 
 <section class="next-step" id="score-capture" aria-labelledby="dispatch-title" tabindex="-1" style="max-width:680px;margin:32px auto;padding:30px 22px;text-align:center">
   <h2 id="dispatch-title" style="font-size:1.7rem;line-height:1.05;margin-bottom:10px">Get the Dispatch.</h2>
