@@ -137,6 +137,17 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
 .gate-ok{margin:14px 0 0;font-weight:600;color:var(--ink,#1D1720)}
 .gate-err{margin:14px 0 0;color:#8C1D40}
 .gate-next{margin-top:18px;text-align:center;font-size:.98rem}
+.ed-card{margin:22px auto 0;max-width:560px;text-align:left;background:var(--paper-2,#F6F2F1);border:1px solid var(--line,#DCD3D1);border-radius:18px;padding:26px 28px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between}
+.ed-card .ed-txt{flex:1 1 280px;min-width:0}
+.ed-k{font-family:var(--mono,Inter,sans-serif);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tul-accent-deep,#8C1D40);margin:0 0 8px}
+.ed-h{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.35rem;line-height:1.2;margin:0 0 6px;color:var(--ink,#1D1720)}
+.ed-p{color:var(--ink-soft,#4A404B);margin:0;font-size:.98rem;line-height:1.55}
+.ed-card .gumroad-button{display:inline-block;padding:13px 24px;border-radius:30px;text-decoration:none;font-weight:600;white-space:nowrap}
+.ed-all{display:block;margin-top:10px;font-size:.88rem;color:var(--gray,#625862)}
+.ed-strip{border-top:1px solid var(--line);background:var(--paper-2)}
+.ed-strip .wrap{max-width:800px;text-align:center}
+.ed-strip ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center}
+.ed-strip a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 </style>
 <script src="/tul-forms.js?v=2" defer></script>
@@ -187,23 +198,29 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
       <p class="gate-ok" id="gateOk" hidden role="status">Sent. Check your inbox for your Load Map. If it's not there in five minutes, check promotions.</p>
       <p class="gate-err" id="gateErr" hidden role="alert">That didn't go through. Try again, or write to hello@frdtlab.com.</p>
     </div>
-    <p class="gate-next">Ready to start now? <a href="https://buy.stripe.com/eVq3cv6PZ0Yn3bY73D1Nu0a?utm_source=scorecard">The Carrying vs. Caring workbook, $24</a>.</p>
+    <div class="ed-card" id="edCard">
+      <div class="ed-txt">
+        <p class="ed-k">Made for your result</p>
+        <h3 class="ed-h" id="edName"></h3>
+        <p class="ed-p" id="edWhy"></p>
+      </div>
+      <div>
+        <a class="gumroad-button btn-primary" id="edBtn" href="https://buy.stripe.com/eVq3cv6PZ0Yn3bY73D1Nu0a"></a>
+        <a class="ed-all" href="/shop">See all the Editions</a>
+      </div>
+    </div>
     <button class="retake" onclick="location.reload()">Retake the scorecard</button>
   </section>
 </main>
 
-<section class="sec" id="workbook" style="border-top:1px solid var(--line);background:var(--paper-2)"><div class="wrap" style="max-width:800px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
-  <div style="flex:1 1 340px"><div class="eyebrow" style="color:var(--pink-deep)">The workbook</div>
-  <h2 style="font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.3rem);letter-spacing:-.02em;margin:10px 0 8px;color:var(--ink)">Carrying vs. Caring, a 14-day workbook.</h2>
-  <p style="color:var(--ink-soft);line-height:1.6;margin:0">Fourteen days to set down what was never yours to hold, the two-pile sort, a daily practice, and room to write. Instant PDF.</p></div>
-  <a class="gumroad-button" href="https://buy.stripe.com/eVq3cv6PZ0Yn3bY73D1Nu0a" style="background:var(--pink);color:#fff;font-weight:600;padding:14px 28px;border-radius:30px;text-decoration:none;white-space:nowrap">Get the workbook, $24</a>
-</div></section>
-
-<section class="sec" id="diagnostic-kit" style="border-top:1px solid var(--line);background:var(--paper-2)"><div class="wrap" style="max-width:800px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
-  <div style="flex:1 1 340px"><div class="eyebrow" style="color:var(--pink-deep)">Go deeper, the diagnostic kit</div>
-  <h2 style="font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.3rem);letter-spacing:-.02em;margin:10px 0 8px;color:var(--ink)">What Am I Carrying?, the full diagnostic.</h2>
-  <p style="color:var(--ink-soft);line-height:1.6;margin:0">Twenty questions scored across five domains, plus the Mine/Not-Mine sort, eight boundary scripts, and a one-week plan. The paid step up from the free scorecard. Instant PDF.</p></div>
-  <a class="gumroad-button" href="https://buy.stripe.com/6oUbJ13DNayX7se73D1Nu0c" style="background:var(--pink);color:#fff;font-weight:600;padding:14px 28px;border-radius:30px;text-decoration:none;white-space:nowrap">Get the kit, $47</a>
+<section class="sec ed-strip" id="editions-strip"><div class="wrap">
+  <div class="eyebrow" style="color:var(--pink-deep)">The Editions</div>
+  <h2 style="font-family:var(--display);font-size:clamp(1.4rem,3vw,1.9rem);letter-spacing:-.02em;margin:10px 0 0;color:var(--ink)">Go further on your own.</h2>
+  <ul>
+    <li><a href="https://buy.stripe.com/6oUeVd2zJ0YndQC5Zz1Nu0b">The Human Cost of Competence, journal, $29</a></li>
+    <li><a href="https://buy.stripe.com/eVq3cv6PZ0Yn3bY73D1Nu0a">Carrying vs. Caring, 14-day workbook, $24</a></li>
+    <li><a href="https://buy.stripe.com/6oUbJ13DNayX7se73D1Nu0c">What Am I Carrying?, diagnostic kit, $47</a></li>
+  </ul>
 </div></section>
 
 <section class="sec dark movement-bridge">
@@ -269,9 +286,9 @@ quiz.addEventListener('click',e=>{
   btn.disabled=!done;btn.textContent=done?'See what I’m carrying →':`Answer all ${QS.length} (${ans.filter(a=>a!==null).length}/${QS.length})`;
 });
 const TIERS=[
- {min:0,max:3,name:"You hold the line",verdict:"You carry what's yours and let the rest belong to the people it belongs to. That's rarer than you think, and it's the whole game. Protect it, the load has a way of creeping back the moment you're good at holding it.",move:"Keep auditing. Once a season, list everything on your plate and mark each item mine or borrowed. The discipline is what keeps the wall from rebuilding itself."},
- {min:4,max:7,name:"You're becoming the infrastructure",verdict:"You haven't lost yourself, but you're holding more than is yours, and it's starting to cost you in the place rest can't reach. This is the stage where competent women quietly become the building everyone else stands on, one reasonable yes at a time.",move:"Pick the single heaviest thing on your plate that belongs to another adult. Don't announce it. Just stop picking it up, and watch what they're capable of when you finally let them carry it."},
- {min:8,max:10,name:"You are the load-bearing wall",verdict:"You're holding the roof, and everyone has quietly reorganized their lives around the fact that you will. The exhaustion isn't a character flaw or a time-management problem. It's the bill for carrying what was never yours, and it comes due whether or not you open it.",move:"This isn't fixed with a better calendar. It's fixed with one question, asked daily until it rewires something: what here is actually mine? Start handing back the borrowed weight before your body hands it back for you."}
+ {min:0,max:3,name:"You hold the line",verdict:"You carry what's yours and let the rest belong to the people it belongs to. That's rarer than you think, and it's the whole game. Protect it, the load has a way of creeping back the moment you're good at holding it.",move:"Keep auditing. Once a season, list everything on your plate and mark each item mine or borrowed. The discipline is what keeps the wall from rebuilding itself.",ed:{name:"The Human Cost of Competence",why:"Twenty reflections to keep the audit honest, so the load doesn't creep back while you're busy being good at holding it.",cta:"Get the journal, $29",url:"https://buy.stripe.com/6oUeVd2zJ0YndQC5Zz1Nu0b"}},
+ {min:4,max:7,name:"You're becoming the infrastructure",verdict:"You haven't lost yourself, but you're holding more than is yours, and it's starting to cost you in the place rest can't reach. This is the stage where competent women quietly become the building everyone else stands on, one reasonable yes at a time.",move:"Pick the single heaviest thing on your plate that belongs to another adult. Don't announce it. Just stop picking it up, and watch what they're capable of when you finally let them carry it.",ed:{name:"Carrying vs. Caring, the 14-day workbook",why:"The two-pile sort, one daily practice and room to write. Fourteen days to hand back the first borrowed thing and keep it handed back.",cta:"Start the 14 days, $24",url:"https://buy.stripe.com/eVq3cv6PZ0Yn3bY73D1Nu0a"}},
+ {min:8,max:10,name:"You are the load-bearing wall",verdict:"You're holding the roof, and everyone has quietly reorganized their lives around the fact that you will. The exhaustion isn't a character flaw or a time-management problem. It's the bill for carrying what was never yours, and it comes due whether or not you open it.",move:"This isn't fixed with a better calendar. It's fixed with one question, asked daily until it rewires something: what here is actually mine? Start handing back the borrowed weight before your body hands it back for you.",ed:{name:"What Am I Carrying?, the full diagnostic",why:"Twenty questions across five parts of your life, the Mine/Not-Mine sort, eight boundary scripts and a one-week plan. For when the load is structural.",cta:"Get the full diagnostic, $47",url:"https://buy.stripe.com/6oUbJ13DNayX7se73D1Nu0c"}}
 ];
 btn.addEventListener('click',()=>{
   if(btn.disabled)return;
@@ -281,6 +298,11 @@ btn.addEventListener('click',()=>{
   document.getElementById('tierName').textContent=t.name;
   document.getElementById('verdict').textContent=t.verdict;
   document.getElementById('move').textContent=t.move;
+  const tk=score>=8?'wall':(score>=4?'infra':'line');
+  document.getElementById('edName').textContent=t.ed.name;
+  document.getElementById('edWhy').textContent=t.ed.why;
+  const eb=document.getElementById('edBtn');eb.textContent=t.ed.cta;
+  eb.href=t.ed.url+'?utm_source=scorecard&utm_medium=site&utm_content='+tk;
   const r=document.getElementById('result');r.style.display='block';
   try{if(window.gtag)gtag('event','scorecard_complete',{scorecard:'tul_carrying',scorecard_score:score,scorecard_tier:score>=8?'wall':(score>=4?'infra':'line')});}catch(_){}
   document.getElementById('barFill').style.width=(score*10)+'%';
