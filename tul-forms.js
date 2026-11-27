@@ -1,7 +1,7 @@
 /* tul-forms.js: one shared, script-blocker-proof form layer for theunapologeticleader.com.
    Every form posts straight to Klaviyo's client API (same pattern as the scorecard gate),
    shows success only when Klaviyo answers 202, and says so plainly when it doesn't.
-   Also sends GA4 events for leads, signups and Gumroad clicks.
+   Also sends GA4 events for leads, signups and Edition checkout clicks.
 
    Markup contracts:
    - Lead form:     <form data-kl-event="Speaking Inquiry" [data-kl-subscribe="LISTID"] [data-kl-ok="..."] [data-kl-done="#id"]>
@@ -118,12 +118,14 @@
     });
   });
 
-  /* GA4: Gumroad Edition clicks (begin_checkout) */
+  /* GA4: Edition checkout clicks (begin_checkout). Stripe payment links; item_id keeps the old edition slugs. */
   var ED={fieldguide:['Build What’s Next. Stay Human. (field guide)',9],vzzds:['Carrying vs. Caring workbook',24],
           djzgxj:['The Human Cost of Competence journal',29],ptdar:['What Am I Carrying? diagnostic kit',47]};
+  var SL={'5kQ28rden0Yn6oads11Nu09':'fieldguide','eVq3cv6PZ0Yn3bY73D1Nu0a':'vzzds',
+          '6oUeVd2zJ0YndQC5Zz1Nu0b':'djzgxj','6oUbJ13DNayX7se73D1Nu0c':'ptdar'};
   document.addEventListener('click',function(e){
-    var a=e.target&&e.target.closest?e.target.closest('a[href*="gumroad.com/l/"]'):null; if(!a)return;
-    var m=/gumroad\.com\/l\/([a-z0-9]+)/i.exec(a.href); var k=m&&m[1].toLowerCase(), it=ED[k]||[k,0];
+    var a=e.target&&e.target.closest?e.target.closest('a[href*="buy.stripe.com/"]'):null; if(!a)return;
+    var m=/buy\.stripe\.com\/([A-Za-z0-9]+)/.exec(a.href); var k=m&&SL[m[1]]; if(!k)return; var it=ED[k];
     ga('begin_checkout',{currency:'USD',value:it[1],items:[{item_id:k,item_name:it[0],price:it[1],quantity:1}],link_page:location.pathname});
     try{if(window.klaviyo)window.klaviyo.push(['track','TUL Edition Click',{edition:it[0],price:it[1],page:location.pathname}]);}catch(_){}
   },true);
