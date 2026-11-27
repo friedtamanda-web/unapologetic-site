@@ -97,7 +97,10 @@
       var sub=f.getAttribute('data-kl-subscribe');
       if(sub)extras.push(post('subscriptions/',subBody(sub,email,ev)).catch(function(){}));
     }else{
-      main=post('subscriptions/',subBody(list,email,f.getAttribute('data-kl-source')||'TUL Dispatch'));
+      /* data-kl-list can hold several list ids, comma-separated: the first must succeed, the rest are best effort */
+      var lists=list.split(',').map(function(s){return s.trim();}).filter(Boolean), src=f.getAttribute('data-kl-source')||'TUL Dispatch';
+      main=post('subscriptions/',subBody(lists[0],email,src));
+      lists.slice(1).forEach(function(id){extras.push(post('subscriptions/',subBody(id,email,src)).catch(function(){}));});
     }
     main.then(function(){
       return Promise.all(extras);
