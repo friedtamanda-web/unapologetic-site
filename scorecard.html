@@ -124,6 +124,20 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
 </style>
 <style id="mob-grid-fix">@media(max-width:600px){[style*="grid-template-columns"]{grid-template-columns:1fr!important}img,svg,video{max-width:100%!important;height:auto!important}html,body{overflow-x:hidden!important}}</style>
 <link rel="stylesheet" href="/tul.css?v=5">
+<style id="gate-css">
+.gate{margin:34px auto 0;max-width:560px;text-align:left;background:#fff;border:1px solid var(--line,#DCD3D1);border-radius:18px;padding:28px}
+.gate-k{font-family:var(--mono,Inter,sans-serif);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--tul-accent-deep,#8C1D40);margin:0 0 8px}
+.gate-h{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:1.6rem;line-height:1.15;margin:0 0 8px;color:var(--ink,#1D1720)}
+.gate-p{color:var(--ink-soft,#4A404B);margin:0 0 16px;font-size:1rem}
+#gateForm{display:flex;gap:10px;flex-wrap:wrap}
+#gateForm input{flex:1 1 220px;padding:14px 16px;border:1px solid var(--ink,#1D1720);border-radius:30px;font-size:1rem;background:#fff;color:var(--ink,#1D1720)}
+#gateForm button{flex:0 0 auto;border:none;cursor:pointer}
+.gate-fine{font-size:.82rem;color:var(--gray,#625862);margin:12px 0 0}
+.gate-ok{margin:14px 0 0;font-weight:600;color:var(--ink,#1D1720)}
+.gate-err{margin:14px 0 0;color:#8C1D40}
+.gate-next{margin-top:18px;text-align:center;font-size:.98rem}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
 </head>
 <body>
 <nav class="tnav" id="nav" aria-label="Main">
@@ -158,19 +172,21 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
     <div class="bar"><div id="barFill"></div></div>
     <p class="verdict" id="verdict"></p>
     <div class="move"><b>What to set down first</b><span id="move"></span></div>
-    <div class="cta">
-      <a class="btn btn-primary" id="ctaSub" href="/essays#subscribe">Get the full breakdown →</a>
-      <a class="btn btn-ghost" id="ctaMini" href="https://unapologeticleader.gumroad.com/l/fieldguide?utm_source=scorecard">Get the $9 field guide</a>
+    <div class="gate" id="gate">
+      <p class="gate-k">Your Load Map</p>
+      <h3 class="gate-h">Get the full breakdown in your inbox.</h3>
+      <p class="gate-p">Where you said yes, what to set down first, and a seven-day plan to hand it back. Free.</p>
+      <form id="gateForm" novalidate>
+        <label class="sr" for="gateEmail">Email</label>
+        <input id="gateEmail" name="email" type="email" required autocomplete="email" placeholder="you@email.com">
+        <button type="submit" class="btn btn-primary" id="gateBtn">Send my Load Map</button>
+      </form>
+      <p class="gate-fine">You'll get your Load Map now and a few letters after. Unsubscribe anytime. <a href="/privacy">Privacy</a>.</p>
+      <p class="gate-ok" id="gateOk" hidden role="status">Sent. Check your inbox for your Load Map. If it's not there in five minutes, check promotions.</p>
+      <p class="gate-err" id="gateErr" hidden role="alert">That didn't go through. Try again, or write to hello@frdtlab.com.</p>
     </div>
-    <p style="margin:20px auto 0;max-width:48ch">Want to work through one responsibility with Amanda? <a href="/whose-is-this" style="color:var(--tul-accent-deep);text-decoration:underline;text-underline-offset:3px;font-weight:700">Explore the Whose Is This? workshop</a>.</p>
+    <p class="gate-next">Ready to start now? <a href="https://unapologeticleader.gumroad.com/l/vzzds?utm_source=scorecard">The Carrying vs. Caring workbook, $24</a>.</p>
     <button class="retake" onclick="location.reload()">Retake the scorecard</button>
-  </section>
-
-  <section id="score-capture" style="max-width:680px;margin:46px auto 0;padding:30px 22px;border-top:1px solid #DCD3D1;text-align:center">
-    <p style="font-family:"Inter",ui-monospace,monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tul-accent-deep);margin-bottom:10px">The deeper breakdown</p>
-    <h2 style="font-family:'Archivo Narrow','Archivo',sans-serif;font-weight:700;text-transform:uppercase;font-size:1.7rem;line-height:1.05;color:#1D1720;margin-bottom:10px">Get the letters on what you're carrying.</h2>
-    <p style="color:#463C47;max-width:46ch;margin:0 auto 18px">Where the scorecard ends, the letters begin, the words for putting it down, in your inbox.</p>
-    <div class="klaviyo-form-RLAjDk"></div>
   </section>
 </main>
 
@@ -188,12 +204,13 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
   <a class="gumroad-button" href="https://unapologeticleader.gumroad.com/l/ptdar?wanted=true" data-gumroad-overlay-checkout="true" style="background:var(--pink);color:#fff;font-weight:600;padding:14px 28px;border-radius:30px;text-decoration:none;white-space:nowrap">Get the kit, $47</a>
 </div></section>
 
-<section class="sec dark movement-bridge">
+<!-- Held until the group mentorship page ships; remove hidden to show -->
+<section class="sec dark movement-bridge" hidden>
   <div class="wrap">
     <span class="eyebrow">This is one step</span>
     <h2>You were never meant to put it down alone.</h2>
-    <p>Naming what you carry is the first move. Setting it down for good is something we do together. The Unapologetic Leader is becoming a movement. People, not just women, learning, training, and backing each other so no one carries it solo. Permission is the door. The movement is the room.</p>
-    <p style="margin-top:22px"><a href="/the-movement" class="btn btn-primary">Join the movement, it&rsquo;s free &rarr;</a></p>
+    <p>Naming what you carry is the first move. Setting it down for good is something we do together. Friday Conversations is a 12-week group mentorship for a small room of women who lead: see what you carry, hand it back, build what's yours.</p>
+    <p><a href="/friday-conversations" class="btn btn-primary">See the 12 weeks &rarr;</a></p>
   </div>
 </section>
 <footer id="tulfoot">
@@ -264,6 +281,30 @@ btn.addEventListener('click',()=>{
   document.getElementById('barFill').style.width=(score*10)+'%';
   r.scrollIntoView({behavior:'smooth'});
 });
+</script>
+<script>/* scorecard email gate -> Klaviyo list TfeeeN (TUL Scorecard Takers) */
+(function(){
+  var LABELS=["Things quietly route to you","Things would break if you vanished for two weeks","You fix problems before anyone sees them","You manage other people's moods","You say yes because you can, not because it's yours","You're the dependable one","Rest doesn't fix the tired","You rescue people from consequences","You hold context no one else has","Being needed has started to feel like being valued"];
+  var form=document.getElementById('gateForm'); if(!form) return;
+  function answers(){var a=[];document.querySelectorAll('#quiz .q').forEach(function(r){var on=r.querySelector('button.on');a.push(on?+on.dataset.v:0);});return a;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=(document.getElementById('gateEmail').value||'').trim();
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){document.getElementById('gateEmail').focus();return;}
+    var a=answers(),score=a.reduce(function(x,y){return x+y},0);
+    var tier=score>=8?'wall':(score>=4?'infra':'line');
+    var yes=LABELS.filter(function(_,i){return a[i]===1}).join(' \u00b7 ');
+    var btn=document.getElementById('gateBtn');btn.disabled=true;btn.textContent='Sending...';
+    var props={scorecard_score:score,scorecard_tier:tier,scorecard_yes:yes||'None this time',scorecard_taken_at:new Date().toISOString()};
+    var body={data:{type:'subscription',attributes:{custom_source:'TUL Scorecard',profile:{data:{type:'profile',attributes:{email:email,properties:props}}}},relationships:{list:{data:{type:'list',id:'TfeeeN'}}}}};
+    fetch('https://a.klaviyo.com/client/subscriptions?company_id=Twvzce',{method:'POST',headers:{'Content-Type':'application/vnd.api+json','revision':'2024-10-15'},body:JSON.stringify(body)})
+    .then(function(r){if(!r.ok)throw new Error(r.status);
+      try{if(window.klaviyo){window.klaviyo.push(['identify',{'$email':email}]);window.klaviyo.push(['track','TUL Scorecard Completed',props]);}}catch(_){}
+      try{if(window.gtag)gtag('event','generate_lead',{lead_source:'tul_scorecard',scorecard_tier:tier});}catch(_){}
+      form.hidden=true;document.getElementById('gateOk').hidden=false;document.getElementById('gateErr').hidden=true;})
+    .catch(function(){btn.disabled=false;btn.textContent='Send my Load Map';document.getElementById('gateErr').hidden=false;});
+  });
+})();
 </script>
 <!-- Consent banner (Consent Mode v2) -->
 <style>
