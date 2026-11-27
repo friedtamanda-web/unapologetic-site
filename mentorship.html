@@ -19,11 +19,24 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Paid Leadership Workshop Series | Coming Soon", "description": "The Unapologetic Leader\u2019s paid workshop series is coming soon. Start with Whose Is This? and practice sharing ownership, setting boundaries, and making room for your own work.", "url": "https://theunapologeticleader.com/mentorship", "about": {"@type": "Thing", "name": "Leadership workshops"}, "author": {"@type": "Person", "name": "Amanda Friedt", "url": "https://theunapologeticleader.com/about"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&amp;family=Inter:wght@400;600;700;800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/tul.css?v=5">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<nav class="nav" aria-label="Main"><div class="wrap"><a class="wordmark" href="/">The Unapologetic Leader</a><div class="navlinks"><a href="/whose-is-this">Whose Is This?</a><a href="/mentorship" aria-current="page">Workshops</a><a href="/scorecard">Scorecard</a><a href="/essays">Essays</a></div></div></nav>
+<nav class="tnav" id="nav" aria-label="Main">
+  <div class="t-wrap">
+    <a class="t-skip" href="#main">Skip to content</a><a class="t-mark" href="/">The <i>Unapologetic</i> Leader</a>
+    <button class="t-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <ul class="t-links" id="navLinks">
+      <li><a href="/essays">Read</a></li>
+      <li><a href="/#editions">The Editions</a></li>
+      <li><a href="/work-with-amanda">Engage</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a class="t-btn" href="/scorecard">Take the scorecard</a></li>
+    </ul>
+  </div>
+</nav>
 <main id="main">
 <header class="hero"><div class="wrap">
 <div><p class="label">From The Unapologetic Leader · Coming soon</p><h1>Lead with <em>room to grow.</em></h1>
@@ -39,6 +52,28 @@
 <section class="band cta" id="apply"><div class="wrap"><p class="label">Paid workshop series · Coming soon</p><h2>Hear when the series opens.</h2><p>Email me for the announcement, or tell me what you’d like to work on. You’re expressing interest, not enrolling.</p>
 <div class="actions"><a class="btn" href="mailto:hello@frdtlab.com?subject=Unapologetic%20Leader%20workshop%20series%20interest">Email Amanda about the series</a><a href="/whose-is-this">Start with Whose Is This?</a></div><p class="fine">You can also write to <a href="mailto:hello@frdtlab.com?subject=Unapologetic%20Leader%20workshop%20series%20interest">hello@frdtlab.com</a>.</p></div></section>
 </main>
-<footer class="footer"><div class="wrap"><span>The Unapologetic Leader · Presented by Lipstick &amp; Receipts</span><div class="navlinks"><a href="/about">About</a><a href="/speaking">Speaking</a><a href="/privacy">Privacy</a></div></div></footer>
+<footer id="tulfoot">
+  <div class="t-wrap">
+    <div class="t-foot">
+      <div class="t-brand">
+        <a class="t-mark" href="/">The <i>Unapologetic</i> Leader</a>
+        <p>Leadership work for high-capacity women, by Amanda Friedt. Detroit. A flagship initiative of FRDTLAB. Presented by Lipstick &amp; Receipts.</p>
+      </div>
+      <div><h4>Work</h4><ul>
+        <li><a href="/scorecard">Scorecard</a></li><li><a href="/whose-is-this">Whose Is This?</a></li><li><a href="/friday-conversations">Friday Conversations</a></li><li><a href="/speaking">Speaking</a></li><li><a href="/partner">Partner</a></li></ul></div>
+      <div><h4>Read</h4><ul>
+        <li><a href="/start-here">Start here</a></li><li><a href="/frameworks">Frameworks</a></li><li><a href="/essays">Essays</a></li><li><a href="/from-the-field">From the Field</a></li><li><a href="/amplify">Amplify</a></li><li><a href="/the-builders">The Field Note</a></li></ul></div>
+      <div><h4>More</h4><ul>
+        <li><a href="/desk-oracle">The Desk Oracle</a></li><li><a href="/themiddle">The Middle</a></li><li><a href="/the-movement">The Movement</a></li><li><a href="/impact">Impact</a></li><li><a href="https://unapologeticleader.gumroad.com/l/fieldguide">Field guide</a></li><li><a href="/community">Community</a></li><li><a href="/press">Press</a></li><li><a href="https://frdtlab.com">FRDTLAB</a></li></ul></div>
+    </div>
+    <div class="t-legal">
+      <span>&copy; 2026 Amanda Friedt</span>
+      <a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/messaging">Messaging Terms</a><a href="/privacy#choices">Your Privacy Choices</a>
+      <a href="https://www.linkedin.com/in/amandafriedt/">LinkedIn</a><a href="https://www.instagram.com/unapologetic_leader/">Instagram</a><a href="https://www.tiktok.com/@unapologeticleadership">TikTok</a>
+      <span>hello@frdtlab.com</span>
+    </div>
+  </div>
+</footer>
+<script>(function(){var n=document.getElementById('nav'),b=document.getElementById('menuBtn'),l=document.getElementById('navLinks');if(!n||!b||!l)return;addEventListener('scroll',function(){n.classList.toggle('scrolled',scrollY>24)},{passive:true});b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});})();</script>
 </body>
 </html>
