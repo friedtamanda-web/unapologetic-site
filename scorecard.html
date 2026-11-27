@@ -304,7 +304,7 @@ btn.addEventListener('click',()=>{
     var body={data:{type:'subscription',attributes:{custom_source:'TUL Scorecard',profile:{data:{type:'profile',attributes:{email:email,properties:props}}}},relationships:{list:{data:{type:'list',id:'TfeeeN'}}}}};
     fetch('https://a.klaviyo.com/client/subscriptions?company_id=Twvzce',{method:'POST',headers:{'Content-Type':'application/vnd.api+json','revision':'2024-10-15'},body:JSON.stringify(body)})
     .then(function(r){if(!r.ok)throw new Error(r.status);
-      try{if(window.klaviyo){window.klaviyo.push(['identify',{'$email':email}]);window.klaviyo.push(['track','TUL Scorecard Completed',props]);}}catch(_){}
+      try{fetch('https://a.klaviyo.com/client/events?company_id=Twvzce',{method:'POST',keepalive:true,headers:{'Content-Type':'application/vnd.api+json','revision':'2024-10-15'},body:JSON.stringify({data:{type:'event',attributes:{properties:props,metric:{data:{type:'metric',attributes:{name:'TUL Scorecard Completed'}}},profile:{data:{type:'profile',attributes:{email:email}}}}}})}).catch(function(){});}catch(_){}
       try{if(window.gtag)gtag('event','generate_lead',{lead_source:'tul_scorecard',scorecard_tier:tier});}catch(_){}
       form.hidden=true;document.getElementById('gateOk').hidden=false;document.getElementById('gateErr').hidden=true;})
     .catch(function(){btn.disabled=false;btn.textContent='Send my Load Map';document.getElementById('gateErr').hidden=false;});
