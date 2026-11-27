@@ -227,6 +227,7 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
 @media(max-width:860px){.facts{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.facts{grid-template-columns:1fr}.wk{grid-template-columns:44px 1fr}}
 </style>
+<script src="/tul-forms.js?v=1" defer></script>
 </head>
 <body>
 
@@ -400,8 +401,8 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
     <span class="eyebrow" style="color:var(--pink-deep)">The Unapologetic Dispatch</span>
     <h2 style="font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin:12px 0 10px;color:var(--ink)">Letters worth sitting with.</h2>
     <p style="color:var(--ink-soft);max-width:54ch;line-height:1.6">Reflections from the work of building a life and a body of work without apology. No hype. No noise. Something worth sitting with.</p>
-    <div class="klaviyo-form-RLAjDk" style="margin:22px 0 6px"></div>
-    <p class="small" style="color:var(--ink-soft);font-size:.92rem">Free. Arrives when there's something real to say. <a href="/essays" style="color:var(--pink-deep)">Or read past letters &rarr;</a></p>
+    <form class="tulf" data-kl-list="TejKnW" data-kl-source="TUL Dispatch" novalidate><label for="dispatch-email">Email address</label><div class="tulf-row"><input id="dispatch-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com"><button type="submit">Get the letters</button></div><p class="tulf-fine">Free. Unsubscribe anytime. <a href="/privacy">Privacy</a>.</p></form>
+<p class="small" style="color:var(--ink-soft);font-size:.92rem">Free. Arrives when there's something real to say. <a href="/essays" style="color:var(--pink-deep)">Or read past letters &rarr;</a></p>
   </div></div>
 </section>
 
@@ -427,18 +428,6 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
   </div>
 </section>
 
-<script>/* kl-lead-handler */
-document.addEventListener('submit',function(e){
-  var fm=e.target; if(!fm||!fm.getAttribute||!fm.getAttribute('data-kl-event'))return;
-  e.preventDefault();
-  var fd=new FormData(fm),p={};
-  fd.forEach(function(v,k){ if(k.charAt(0)!=='_'&&v){ p[k]=p[k]?p[k]+', '+v:''+v; } });
-  var email=p.email||'';
-  try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', fm.getAttribute('data-kl-event'), p]); window.klaviyo.push(['track','New Lead',Object.assign({form:fm.getAttribute('data-kl-event'),brand:'UNAPOLOGETIC'},p)]); } }catch(err){}
-  var msg=document.createElement('p'); msg.style.cssText='font-size:1.05rem;margin-top:10px'; msg.textContent=fm.getAttribute('data-kl-ok')||'Got it. Watch your inbox for Friday times.';
-  fm.parentNode.insertBefore(msg,fm.nextSibling); fm.style.display='none';
-});
-</script>
 <footer id="tulfoot">
   <div class="t-wrap">
     <div class="t-foot">

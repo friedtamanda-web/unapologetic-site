@@ -341,6 +341,7 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
 </style>
 <link rel="stylesheet" href="/tul.css?v=5">
 <style id="tul-dark">.book-cover,.do-pull-card{--tul-accent:#DB7C95;--tul-accent-deep:#E89AAE;--tul-on-accent:#1A0F15;--pink:#DB7C95;--pink-deep:#E89AAE;--blue:#DB7C95}.book-cover .btn-primary,.book-cover .btn-p,.do-pull-card .btn-primary,.do-pull-card .btn-p{background:#DB7C95!important;color:#1A0F15!important}.book-cover .btn-primary:hover,.book-cover .btn-p:hover,.do-pull-card .btn-primary:hover,.do-pull-card .btn-p:hover{background:#E89AAE!important;color:#1A0F15!important}</style>
+<script src="/tul-forms.js?v=1" defer></script>
 </head>
 <body>
 <nav class="tnav t-fixed" id="nav" aria-label="Main">
@@ -368,7 +369,7 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
       <div class="do-buy" id="buy">
         <div class="do-price" id="doPrice">$60<small>founding edition &middot; reserve now, pay when pre-orders open</small></div>
         <a class="do-btn" id="doPreorder" href="#reserve" hidden>Pre-order the deck</a>
-        <form class="do-form" id="reserve" data-kl-event="Desk Oracle Reserve" data-kl-subscribe="UpyBG6">
+        <form class="do-form" id="reserve" data-kl-event="Desk Oracle Reserve" data-kl-subscribe="UpyBG6" data-kl-ok="You are on the list. Watch your inbox for founding access.">
           <label for="do-email" style="position:absolute;left:-9999px">Email address</label>
           <input id="do-email" type="email" name="email" placeholder="you@email.com" required autocomplete="email">
           <input type="hidden" name="product" value="The Desk Oracle">
@@ -416,7 +417,7 @@ h2 em{font-style:normal;background:var(--pink);color:var(--ink)!important;paddin
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
           <button type="button" class="do-btn" id="pullBtn">Pull a card</button>
         </div>
-        <form class="do-form" id="pullForm" data-kl-event="Desk Oracle Card Pull Signup" data-kl-subscribe="UpyBG6">
+        <form class="do-form" id="pullForm" data-kl-event="Desk Oracle Card Pull Signup" data-kl-subscribe="UpyBG6" data-kl-ok="You are on the list. Your first card lands Monday.">
           <label for="pull-email" style="position:absolute;left:-9999px">Email address</label>
           <input id="pull-email" type="email" name="email" placeholder="you@email.com" required autocomplete="email">
           <input type="hidden" name="product" value="The Desk Oracle">
@@ -531,20 +532,6 @@ try{if('IntersectionObserver' in window){const io=new IntersectionObserver((e)=>
   f.querySelector('button').textContent='Not ready? Get updates';
   fine.textContent='Secure checkout by Stripe. Founding edition ships after the final proof is approved; you get the ship date by email.';
 })();
-</script>
-<script>/* kl-lead-handler */
-document.addEventListener('submit',function(e){
-  var fm=e.target; if(!fm||!fm.getAttribute||!fm.getAttribute('data-kl-event'))return;
-  e.preventDefault();
-  var fd=new FormData(fm),p={}; fd.forEach(function(v,k){ if(v){ p[k]=v; } });
-  var email=p.email||'';
-  try{ if(window.klaviyo&&email){ window.klaviyo.push(['identify',Object.assign({'$email':email},p)]); window.klaviyo.push(['track',fm.getAttribute('data-kl-event'),p]); } }catch(err){}
-  try{ if(window.gtag){ gtag('event','generate_lead',{form_name:fm.getAttribute('data-kl-event')}); } }catch(err){}
-  var listId=fm.getAttribute('data-kl-subscribe');
-  if(listId&&email){ try{ fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Twvzce',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','revision':'2024-10-15'},body:JSON.stringify({data:{type:'subscription',attributes:{custom_source:fm.getAttribute('data-kl-event'),profile:{data:{type:'profile',attributes:{email:email}}}},relationships:{list:{data:{type:'list',id:listId}}}}})}); }catch(err){} }
-  var msg=document.createElement('p'); msg.style.cssText='font-size:1.05rem;margin-top:6px'; msg.textContent='You are on the list. Watch your inbox for founding access.';
-  fm.parentNode.insertBefore(msg,fm.nextSibling); fm.style.display='none';
-});
 </script>
 <!-- Consent banner (Consent Mode v2) -->
 <style>

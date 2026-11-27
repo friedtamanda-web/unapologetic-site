@@ -97,6 +97,7 @@
 <script>gtag('js',new Date());gtag('config','G-1TGNWXQ27S');</script>
 <link rel="stylesheet" href="/tul.css?v=5">
 <style id="tul-dark">.gate{--tul-accent:#DB7C95;--tul-accent-deep:#E89AAE;--tul-on-accent:#1A0F15;--pink:#DB7C95;--pink-deep:#E89AAE;--blue:#DB7C95}.gate .btn-primary,.gate .btn-p{background:#DB7C95!important;color:#1A0F15!important}.gate .btn-primary:hover,.gate .btn-p:hover{background:#E89AAE!important;color:#1A0F15!important}</style>
+<script src="/tul-forms.js?v=1" defer></script>
 </head>
 <body>
 <nav class="tnav" id="nav" aria-label="Main">
@@ -150,8 +151,9 @@
     <div class="eyebrow">Read it free</div>
     <h2>Get the field note.</h2>
     <p>Free. Drop your email and it's yours to read right now. No spam, leave anytime. You'll also be the first to know when the movement opens its next door.</p>
-    <form class="gform" id="bform" onsubmit="return window.UL_getBuilders();">
-      <input id="bemail" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
+    <form class="gform" id="bform" data-kl-event="Builders Field Note" data-kl-done="#gdone" novalidate>
+      <label for="bemail" style="position:absolute;left:-9999px">Email address</label>
+      <input id="bemail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@email.com" required>
       <button type="submit">Send it to me &rarr;</button>
     </form>
     <p class="gerr" id="berr">Add a valid email and we'll send your download.</p>
@@ -193,23 +195,37 @@
   </div>
 </footer>
 
-<script>
-window.UL_getBuilders=function(){
-  var el=document.getElementById('bemail'); var email=(el&&el.value||'').trim();
-  var err=document.getElementById('berr');
-  if(!email||email.indexOf('@')<1||email.lastIndexOf('.')<email.indexOf('@')){ if(err)err.style.display='block'; return false; }
-  if(err)err.style.display='none';
-  try{
-    var kl=window.klaviyo=window.klaviyo||[];
-    kl.push(['identify',{'$email':email,'brand':'Unapologetic Leader','source':'builders_field_note'}]);
-    kl.push(['track','Builders Field Note',{'lead_magnet':'The Builders Are Going To Be Fine'}]);
-    try{window.klaviyo.push(['track','New Lead',{form:'Builders Field Note',brand:'Unapologetic Leader'}]);}catch(e){}
-  }catch(e){}
-  document.getElementById('bform').style.display='none';
-  document.getElementById('berr').style.display='none';
-  document.getElementById('gdone').style.display='block';
-  return false;
-};
-</script>
 <script>(function(){var n=document.getElementById('nav'),b=document.getElementById('menuBtn'),l=document.getElementById('navLinks');if(!n||!b||!l)return;addEventListener('scroll',function(){n.classList.toggle('scrolled',scrollY>24)},{passive:true});b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});})();</script>
+<!-- Consent banner (Consent Mode v2) -->
+<style>
+.ulc{position:fixed;left:16px;right:16px;bottom:16px;z-index:9000;max-width:560px;margin:0 auto;background:#fff;border:1px solid #E4DCDA;border-radius:14px;box-shadow:0 16px 50px rgba(0,0,0,.18);padding:18px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;font-family:"Archivo",system-ui,sans-serif}
+.ulc[hidden]{display:none}
+.ulc p{margin:0;font-size:.9rem;color:#463C47;line-height:1.45;flex:1 1 240px}
+.ulc p a{color:var(--tul-accent-deep,#6E1431);text-decoration:underline}
+.ulc-btns{display:flex;gap:10px}
+.ulc-btn{font-family:"Inter",ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:11px 18px;border-radius:30px;border:none;cursor:pointer}
+.ulc-ghost{background:transparent;border:1px solid #E4DCDA;color:#463C47}
+.ulc-yes{background:var(--tul-accent,#8C1D40);color:#fff}
+.ulc-yes:hover{background:#1D1720}
+</style>
+<div id="ulConsent" class="ulc" hidden role="dialog" aria-label="Privacy choices">
+  <p>We use one privacy-friendly analytics cookie to learn what resonates. No ads, no selling your data. See our <a href="/privacy">Privacy Policy</a>.</p>
+  <div class="ulc-btns">
+    <button type="button" id="ulcNo" class="ulc-btn ulc-ghost">Decline</button>
+    <button type="button" id="ulcYes" class="ulc-btn ulc-yes">Allow</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY='ul-consent-v1', bar=document.getElementById('ulConsent'), saved=null;
+  function apply(state){gtag('consent','update',{'ad_storage':state,'ad_user_data':state,'ad_personalization':state,'analytics_storage':state});}
+  try{saved=localStorage.getItem(KEY);}catch(e){}
+  if(saved==='granted'){apply('granted');}
+  else if(saved!=='denied'){ if(bar) bar.hidden=false; }
+  function choose(v){try{localStorage.setItem(KEY,v);}catch(e){} if(v==='granted')apply('granted'); if(bar)bar.hidden=true;}
+  var y=document.getElementById('ulcYes'), n=document.getElementById('ulcNo');
+  if(y)y.addEventListener('click',function(){choose('granted');});
+  if(n)n.addEventListener('click',function(){choose('denied');});
+})();
+</script>
 </body></html>

@@ -278,6 +278,7 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
 <style id="mob-grid-fix">@media(max-width:600px){[style*="grid-template-columns"]{grid-template-columns:1fr!important}img,svg,video{max-width:100%!important;height:auto!important}html,body{overflow-x:hidden!important}}</style>
 <link rel="stylesheet" href="/tul.css?v=5">
 <style id="tul-dark">.book-cover{--tul-accent:#DB7C95;--tul-accent-deep:#E89AAE;--tul-on-accent:#1A0F15;--pink:#DB7C95;--pink-deep:#E89AAE;--blue:#DB7C95}.book-cover .btn-primary,.book-cover .btn-p{background:#DB7C95!important;color:#1A0F15!important}.book-cover .btn-primary:hover,.book-cover .btn-p:hover{background:#E89AAE!important;color:#1A0F15!important}</style>
+<script src="/tul-forms.js?v=1" defer></script>
 </head><body><nav class="tnav t-fixed" id="nav" aria-label="Main">
   <div class="t-wrap">
     <a class="t-mark" href="/">The <i>Unapologetic</i> Leader</a>
@@ -411,7 +412,7 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
     <span class="eyebrow">Bring it to your stage</span>
     <h2>Let's give your room something to repeat.</h2>
     <p>Keynotes, workshops, and fireside conversations. Tell me about your audience and the moment they are in.</p>
-    <form class="spk-form" data-kl-event="Speaking Inquiry" style="max-width:640px;margin-top:30px">
+    <form class="spk-form" data-kl-event="Speaking Inquiry" data-kl-ok="Thank you. I have your inquiry and will be in touch." style="max-width:640px;margin-top:30px">
       <input type="hidden" name="_subject" value="UL speaking inquiry">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column"><label for="sname" style="font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:7px">Your name</label><input id="sname" name="name" type="text" required style="font-size:1rem;background:#fff;border:1px solid var(--line);color:var(--ink);padding:13px 14px;border-radius:2px"></div>
@@ -436,8 +437,8 @@ h1 em,h2 em,.hero em,.display em,.lede em,blockquote em{font-style:italic!import
     <span class="eyebrow" style="color:var(--pink-deep)">The Unapologetic Dispatch</span>
     <h2 style="font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin:12px 0 10px;color:var(--ink)">Letters worth sitting with.</h2>
     <p style="color:var(--ink-soft);max-width:54ch;line-height:1.6">Reflections from the work of building a life and a body of work without apology. No hype. No noise. Something worth sitting with.</p>
-    <div class="klaviyo-form-RLAjDk" style="margin:22px 0 6px"></div>
-    <p class="small" style="color:var(--ink-soft);font-size:.92rem">Free. Arrives when there's something real to say. <a href="/essays" style="color:var(--pink-deep)">Or read past letters &rarr;</a></p>
+    <form class="tulf" data-kl-list="TejKnW" data-kl-source="TUL Dispatch" novalidate><label for="dispatch-email">Email address</label><div class="tulf-row"><input id="dispatch-email" name="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@email.com"><button type="submit">Get the letters</button></div><p class="tulf-fine">Free. Unsubscribe anytime. <a href="/privacy">Privacy</a>.</p></form>
+<p class="small" style="color:var(--ink-soft);font-size:.92rem">Free. Arrives when there's something real to say. <a href="/essays" style="color:var(--pink-deep)">Or read past letters &rarr;</a></p>
   </div></div>
 </section>
 
@@ -503,18 +504,6 @@ try{if('IntersectionObserver' in window){const io=new IntersectionObserver((e)=>
   if(y)y.addEventListener('click',function(){choose('granted');});
   if(n)n.addEventListener('click',function(){choose('denied');});
 })();
-</script>
-<script>/* kl-lead-handler */
-document.addEventListener('submit',function(e){
-  var f=e.target; if(!f||!f.getAttribute||!f.getAttribute('data-kl-event'))return;
-  e.preventDefault();
-  var fd=new FormData(f),p={};
-  fd.forEach(function(v,k){ if(k.charAt(0)!=='_'&&v){ p[k]=p[k]?p[k]+', '+v:''+v; } });
-  var email=p.email||p.Email||'';
-  try{ if(window.klaviyo){ if(email){window.klaviyo.push(['identify',Object.assign({'$email':email},p)]);} window.klaviyo.push(['track', f.getAttribute('data-kl-event'), p]); window.klaviyo.push(['track','New Lead',Object.assign({form:f.getAttribute('data-kl-event'),brand:'Unapologetic Leader'},p)]); } }catch(err){}
-  var msg=document.createElement('p'); msg.className='small'; msg.style.cssText='font-size:1.05rem;margin-top:12px;color:var(--ink)'; msg.textContent='Thank you. I have your inquiry and will be in touch.';
-  f.parentNode.insertBefore(msg,f.nextSibling); f.style.display='none';
-});
 </script>
 </body><!-- redeploy nudge -->
 </html>
